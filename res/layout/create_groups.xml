@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Group's Name:"
+            android:id="@+id/txtV_group_name" android:textSize="25dp"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:inputType="textPersonName"
+            android:text="@string/enter_group_name"
+            android:ems="10"
+            android:id="@+id/edTxt_group_name" android:textSize="20dp" android:layout_marginTop="30dp"/>
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="SAVE"
+            android:id="@+id/btn_save" android:layout_gravity="center_horizontal"
+            android:textSize="35dp" android:layout_marginTop="60dp"/>
+    <Button android:layout_width="match_parent" android:layout_height="100dp" android:text="CLEAR"
+            android:id="@+id/btn_clear" android:layout_gravity="center_horizontal" android:textSize="35dp"
+            android:layout_marginTop="5dp"/>
+    <Button android:layout_width="match_parent" android:layout_height="100dp" android:text="BACK"
+            android:id="@+id/btn_back" android:layout_gravity="center_horizontal" android:textSize="35dp"
+            android:layout_marginTop="5dp"/>
+</LinearLayout>

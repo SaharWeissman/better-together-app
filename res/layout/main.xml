@@ -7,7 +7,19 @@
     <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World, MyActivity"
+            android:text="Better Together Test Application"
             />
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="120dp"
+            android:text="Show Existing Groups"
+            android:id="@+id/btn_show_existing_groups" android:layout_gravity="center_horizontal" android:singleLine="true"/>
+    <Button android:layout_width="fill_parent" android:layout_height="120dp" android:text="Create New Groups"
+            android:id="@+id/btn_create_new_groups" android:layout_gravity="center_horizontal" android:singleLine="true"/>
+    <Button android:layout_width="fill_parent" android:layout_height="120dp" android:text="Fetch Photos"
+            android:id="@+id/btn_fetch_photos" android:layout_gravity="center_horizontal"
+            android:singleLine="true"/>
+    <Button android:layout_width="fill_parent" android:layout_height="120dp" android:text="Exit"
+            android:id="@+id/btn_exit" android:layout_gravity="center_horizontal" android:singleLine="true"/>
 </LinearLayout>
 
