@@ -14,7 +14,6 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:inputType="textPersonName"
-            android:text="@string/enter_group_name"
             android:ems="10"
             android:id="@+id/edTxt_group_name" android:textSize="20dp" android:layout_marginTop="30dp"/>
     <Button

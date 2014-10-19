@@ -18,5 +18,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".CreateGroupsActivity"/>
+        <activity android:name=".AddUsersToGroupActivity"/>
     </application>
 </manifest>

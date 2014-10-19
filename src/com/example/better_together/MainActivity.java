@@ -44,7 +44,6 @@ public class MainActivity extends Activity {
         Log.d(TAG,"in getAccessToken");
         Intent browserIntent = new Intent(Intent.ACTION_VIEW,Uri.parse(INSTAGRAM_AUTHENTICATION_URL));
         this.startActivity(browserIntent);
-        mGotAccessToken = true;
     }
 
     @Override
@@ -62,6 +61,8 @@ public class MainActivity extends Activity {
                 accessToken = uri.getFragment().replace("access_token=", "");
                 Log.d(TAG, "Found access token: " + accessToken);
                 mAccessToken = accessToken;
+                mGotAccessToken = true;
+                //TODO:save access_token to sharedPref
             } else {
                 Log.d(TAG, "Access token not found. URI: " + uri.toString());
             }
