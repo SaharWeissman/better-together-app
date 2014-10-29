@@ -1,36 +1,32 @@
-package com.example.better_together;
+package com.example.better_together.storage;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.example.better_together.BTConstants;
 
 /**
  * Created by ssdd on 10/19/14.
  */
-public class SharedPrefHelper implements ISharedPrefHelper {
+public class SharedPrefStorage implements IKeyValueStorage{
 
-    private static final String TAG = SharedPrefHelper.class.getName();
+    private static final String TAG = SharedPrefStorage.class.getName();
 
     private SharedPreferences mSharedPref;
-    private int mMode;
-    private String mSharedPrefFileName;
     private Activity mActivity;
 
-    public SharedPrefHelper(Activity activity,int mode){
+    public SharedPrefStorage(Activity activity, int mode){
         if(activity == null){
             Log.w(TAG,"activity or file name is null");
             return;
         }
         this.mActivity = activity;
-        this.mMode = mode;
-        this.mSharedPref = mActivity.getPreferences(mode);
+        this.mSharedPref = mActivity.getSharedPreferences(BTConstants.SHARED_PREF_FILE_NAME,mode);
     }
 
     @Override
     public boolean writeString(String key, String value) {
+        Log.d(TAG,String.format("writing string: key: %s, value: %s",key,value));
         boolean ret = false;
         if(key == null || value == null){
             Log.w(TAG,"key or value is null,cannot write");
@@ -50,17 +46,8 @@ public class SharedPrefHelper implements ISharedPrefHelper {
     }
 
     @Override
-    public JSONObject readJSON(String key) {
-        JSONObject ret = null;
-        String jsonAsString = mSharedPref.getString(key,null);
-        if(jsonAsString != null){
-            try{
-                ret = new JSONObject(jsonAsString);
-            }catch (JSONException e){
-                Log.e(TAG,"unable to parse string to json: " + jsonAsString,e);
-                ret = null;
-            }
-        }
-        return ret;
+    public String readString(String key) {
+        Log.d(TAG,String.format("readString: %s",key));
+        return mSharedPref.getString(key,null);
     }
 }

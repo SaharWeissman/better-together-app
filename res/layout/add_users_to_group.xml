@@ -12,10 +12,10 @@
             android:text="Group's Name:"
             android:id="@+id/txtV_group_name_pre"/>
     <TextView
-            android:layout_width="400dp"
+            android:layout_width="fill_parent"
             android:layout_height="80dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/txtV_group_name"/>
+            android:id="@+id/txtV_enter_group_name"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
     <Button
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:text="SERACH"
+            android:text="SEARCH"
             android:id="@+id/btn_search_user"/>
     <Button
             android:layout_width="match_parent"

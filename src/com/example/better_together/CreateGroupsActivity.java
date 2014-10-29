@@ -1,25 +1,29 @@
 package com.example.better_together;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import com.example.better_together.storage.SharedPrefStorage;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.Iterator;
 
 /**
  * Created by ssdd on 10/17/14.
  */
 public class CreateGroupsActivity extends Activity {
     private static final String TAG = CreateGroupsActivity.class.getName();
-    private static final String SHARED_PREF_KEY_GROUPS = "GROUPS";
     private static final String ON_GROUP_CREATION_SUCCESSFUL_TEXT = "Group created successfully";
     private static final String ON_GROUP_CREATION_FAILED_TEXT = "Group creation FAILED";
 
@@ -29,7 +33,10 @@ public class CreateGroupsActivity extends Activity {
 
     private EditText mEdTxtGroupName;
     private Context mActivity;
-    private SharedPrefHelper mSharedPrefHelper;
+    private SharedPrefStorage mSharedPrefStorage;
+    private AlertDialog mAlertDialog;
+
+    private String mErrorMsg = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +44,7 @@ public class CreateGroupsActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_groups);
         mActivity = this;
-        mSharedPrefHelper = new SharedPrefHelper(this,Context.MODE_PRIVATE);
+        mSharedPrefStorage = new SharedPrefStorage(this,Context.MODE_PRIVATE);
         initUIComponents();
     }
 
@@ -56,6 +63,9 @@ public class CreateGroupsActivity extends Activity {
                     Intent addUsersActivity = new Intent(mActivity,AddUsersToGroupActivity.class);
                     addUsersActivity.putExtra(AddUsersToGroupActivity.EXTRA_GROUP_NAME,groupName);
                     mActivity.startActivity(addUsersActivity);
+                }
+                else{
+                    showErrorDialog(mErrorMsg);
                 }
             }
         });
@@ -80,19 +90,51 @@ public class CreateGroupsActivity extends Activity {
         });
     }
 
-    private boolean createNewGroup(String groupName) {
+    private void showErrorDialog(String mErrorMsg) {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setTitle("Error");
+        alertDialogBuilder.setMessage(mErrorMsg);
+        alertDialogBuilder.setNegativeButton("OK",new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                 mAlertDialog.dismiss();
+            }
+        });
+        mAlertDialog = alertDialogBuilder.create();
+        mAlertDialog.show();
+    }
+
+    private boolean createNewGroup(String iGroupName) {
         boolean successful = false;
+        if(TextUtils.isEmpty(iGroupName)){
+           mErrorMsg = "group name cannot be empty!";
+            return false;
+        }
+
         try{
-            JSONObject groups = mSharedPrefHelper.readJSON(SHARED_PREF_KEY_GROUPS);
+            String groupsAsString = mSharedPrefStorage.readString(BTConstants.SHARED_PREF_KEY_GROUPS);
+            JSONArray groupsJSONArray = new JSONArray();
 
             //first time
-            if(groups == null){
-                groups = new JSONObject();
-                groups.put(SHARED_PREF_KEY_GROUPS, new JSONArray());
+            if(!TextUtils.isEmpty(groupsAsString)){
+                groupsJSONArray = new JSONArray(groupsAsString);
             }
-            JSONArray groupsArray = groups.getJSONArray(SHARED_PREF_KEY_GROUPS);
-            groupsArray.put(new JSONObject().put(groupName,new JSONArray()));
-            successful = mSharedPrefHelper.writeString(SHARED_PREF_KEY_GROUPS,groups.toString());
+
+            // check groupName does not already exist.
+            for(int i =0; i < groupsJSONArray.length(); i++) {
+                JSONObject groupJSON = groupsJSONArray.getJSONObject(i);
+                Iterator<String> keys = groupJSON.keys();
+                while (keys.hasNext()) {
+                    String groupName = keys.next();
+                    if(groupName.equals(iGroupName)){
+                        mErrorMsg = "Group name already exist.";
+                        return false;
+                    }
+                }
+            }
+
+            groupsJSONArray.put(new JSONObject().put(iGroupName,new JSONArray()));
+            successful = mSharedPrefStorage.writeString(BTConstants.SHARED_PREF_KEY_GROUPS,groupsJSONArray.toString());
         }catch(JSONException e){
             Log.e(TAG,"unable to create group",e);
             successful = false;

@@ -1,0 +1,9 @@
+# view AndroidManifest.xml #generated:21
+-keep class com.example.better_together.AddUsersToGroupActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:20
+-keep class com.example.better_together.CreateGroupsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:9
+-keep class com.example.better_together.MainActivity { <init>(...); }
+
