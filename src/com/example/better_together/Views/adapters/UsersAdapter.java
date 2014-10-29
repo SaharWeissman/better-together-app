@@ -24,9 +24,9 @@ public class UsersAdapter extends ArrayAdapter<User>{
     private final IViewItemClickListener mUserItemClickListener;
     private AlertDialog mAlertDialog;
 
-    public UsersAdapter(Activity callingActivity, ArrayList<User> users,IViewItemClickListener userItemClickListner){
+    public UsersAdapter(Activity callingActivity, ArrayList<User> users,IViewItemClickListener userItemClickListener){
         super(callingActivity, 0, users);
-        mUserItemClickListener = userItemClickListner;
+        mUserItemClickListener = userItemClickListener;
     }
 
     @Override

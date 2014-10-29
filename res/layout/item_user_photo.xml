@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
     <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imgV_user_photo_image"/>
+            android:id="@+id/imageView2" android:layout_alignParentTop="true" android:layout_alignParentLeft="true"/>
     <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imgV_user_photo_profile_pic"/>
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/imgV_user_photo_profile_pic" android:layout_below="@+id/imageView2" android:layout_alignParentLeft="true"
+            android:layout_marginTop="18dp"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Small Text"
-            android:id="@+id/txtV_user_photo_username"/>
-</LinearLayout>
+            android:text="username"
+            android:id="@+id/txtV_user_photo_username"
+            android:layout_alignTop="@+id/imgV_user_photo_profile_pic" android:layout_toRightOf="@+id/imgV_user_photo_profile_pic"
+            android:textSize="12dp"/>
+</RelativeLayout>

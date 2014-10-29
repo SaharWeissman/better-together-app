@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import com.example.better_together.BTConstants;
 import com.example.better_together.ThreadPool.fetchPhoto.fromMemory.FetchPhotoFromMemoryTask;
@@ -241,7 +242,7 @@ public class ThreadPoolManager {
         return fetchPhotoTask;
     }
 
-    public static FetchPhotoFromMemoryTask fetchUserProfilePicFromMemory(String profilePicPath, User user, BaseAdapter adapter){
+    public static FetchPhotoFromMemoryTask fetchUserProfilePicFromMemory(String profilePicPath, User user, ArrayAdapter adapter){
         FetchPhotoFromMemoryTask task = sInstance.mFetchUserProfilePicsFromMemoryWorkQueue.poll();
 
         if(task == null){

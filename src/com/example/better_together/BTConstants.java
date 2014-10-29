@@ -31,7 +31,7 @@ public class BTConstants {
     public static final int MESSAGE_NO_PROFILE_PIC_FROM_MEMORY_FOUND = 4;
     public static final int MESSAGE_FOUND_PROFILE_PIC_FROM_MEMORY = 5;
     public static final int MESSAGE_FOUND_USER_RECENT_MEDIA = 6;
-    public static final int NUM_OF_PHOTOS_PER_USER = 2;
+    public static final int NUM_OF_PHOTOS_PER_USER = 5;
     public static String sAppProfilePicDirectoryPrefixPath;
 
     public static void setAppProfilePicDirectoryPrefix(String path){
