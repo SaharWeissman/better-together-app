@@ -2,21 +2,39 @@
 
 <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+        >
     <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageView2" android:layout_alignParentTop="true" android:layout_alignParentLeft="true"/>
+            android:id="@+id/imgV_user_photo"
+            android:layout_below="@+id/txtV_user_photo_caption" android:layout_alignParentLeft="true"
+            />
     <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:id="@+id/imgV_user_photo_profile_pic" android:layout_below="@+id/imageView2" android:layout_alignParentLeft="true"
-            android:layout_marginTop="18dp"/>
+            android:id="@+id/imgV_user_photo_profile_pic"
+            android:layout_alignParentTop="true" android:layout_alignParentLeft="true"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="username"
             android:id="@+id/txtV_user_photo_username"
-            android:layout_alignTop="@+id/imgV_user_photo_profile_pic" android:layout_toRightOf="@+id/imgV_user_photo_profile_pic"
-            android:textSize="12dp"/>
+            android:textSize="10dp"
+            android:layout_alignBottom="@+id/imgV_user_photo_profile_pic"
+            android:layout_toRightOf="@+id/imgV_user_photo_profile_pic"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="caption"
+            android:id="@+id/txtV_user_photo_caption"
+            android:textSize="15dp"
+            android:layout_below="@+id/txtV_user_photo_create_time" android:layout_alignParentLeft="true"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="createdTime"
+            android:id="@+id/txtV_user_photo_create_time"
+            android:layout_below="@+id/imgV_user_photo_profile_pic" android:layout_alignParentLeft="true"
+            android:textSize="7dp"/>
 </RelativeLayout>

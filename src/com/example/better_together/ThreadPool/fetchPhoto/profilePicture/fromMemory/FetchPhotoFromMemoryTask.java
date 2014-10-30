@@ -1,9 +1,8 @@
-package com.example.better_together.ThreadPool.fetchPhoto.fromMemory;
+package com.example.better_together.ThreadPool.fetchPhoto.profilePicture.fromMemory;
 
 import android.graphics.Bitmap;
 import android.widget.BaseAdapter;
 import com.example.better_together.ThreadPool.ThreadPoolManager;
-import com.example.better_together.Views.adapters.UsersAdapter;
 import com.example.better_together.Views.models.User;
 
 /**

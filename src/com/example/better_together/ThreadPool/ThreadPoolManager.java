@@ -2,6 +2,7 @@ package com.example.better_together.ThreadPool;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
@@ -9,13 +10,14 @@ import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import com.example.better_together.BTConstants;
-import com.example.better_together.ThreadPool.fetchPhoto.fromMemory.FetchPhotoFromMemoryTask;
-import com.example.better_together.ThreadPool.fetchPhoto.fromURL.FetchPhotoFromURLTask;
-import com.example.better_together.ThreadPool.recentMedia.GetUserRecentMediaTask;
+import com.example.better_together.ThreadPool.fetchPhoto.profilePicture.fromMemory.FetchPhotoFromMemoryTask;
+import com.example.better_together.ThreadPool.fetchPhoto.profilePicture.fromURL.FetchPhotoFromURLTask;
+import com.example.better_together.ThreadPool.fetchPhoto.recentMedia.GetUserRecentMediaTask;
 import com.example.better_together.ThreadPool.searchUsers.SearchUserRunnable;
 import com.example.better_together.ThreadPool.searchUsers.SearchUserTask;
 import com.example.better_together.Views.adapters.UsersAdapter;
 import com.example.better_together.Views.models.User;
+import com.example.better_together.Views.models.UserPhotos;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -53,6 +55,7 @@ public class ThreadPoolManager {
     private Queue<SearchUserTask> mSearchUserTaskWorkQueue;
     private Queue<FetchPhotoFromURLTask> mFetchUserProfilePicsFromURLWorkQueue;
     private Queue<FetchPhotoFromMemoryTask> mFetchUserProfilePicsFromMemoryWorkQueue;
+    private Queue<GetUserRecentMediaTask> mFetchUserRecentMediaPhotosWorkQueue;
     private JSONObject mLastSearchUserResult;
 
     static {
@@ -116,9 +119,15 @@ public class ThreadPoolManager {
                     case BTConstants.MESSAGE_FOUND_USER_RECENT_MEDIA:{
                         Log.d(TAG,"in case MESSAGE_FOUND_USER_RECENT_MEDIA");
                         GetUserRecentMediaTask task = (GetUserRecentMediaTask)message.obj;
-                        User user = task.getUser();
-                        JSONObject response = task.getUserRecentMediaResponse();
-                        user.setRecentMediaURLArray(extractMediaURLSFromJSONResponse(response));
+                        Bitmap[] photosBitmapArray = task.getUserPhotosBitmapArray();
+                        String[] photosCaptions = task.getUserPhotosCaptionsArray();
+                        String[] photosCreationDates = task.getUserPhotosCreationDatesArray();
+                        UserPhotos userPhotos = task.getUserPhotos();
+                        userPhotos.setPhotos(photosBitmapArray);
+                        userPhotos.setCaptions(photosCaptions);
+                        userPhotos.setCreationDates(photosCreationDates);
+                        ArrayAdapter adapter = task.getArrayAdapter();
+                        adapter.notifyDataSetChanged();
                         break;
                     }
                     default:{
@@ -131,6 +140,7 @@ public class ThreadPoolManager {
         mSearchUserTaskWorkQueue = new LinkedBlockingQueue<SearchUserTask>(); //queue for search user tasks
         mFetchUserProfilePicsFromURLWorkQueue = new LinkedBlockingQueue<FetchPhotoFromURLTask>(); //queue for fetch profile pics tasks
         mFetchUserProfilePicsFromMemoryWorkQueue = new LinkedBlockingQueue<FetchPhotoFromMemoryTask>(); //queue for fetch profile pics tasks
+        mFetchUserRecentMediaPhotosWorkQueue = new LinkedBlockingQueue<GetUserRecentMediaTask>();
 
         // SEARCH USERS
         // queue for runnable tasks
@@ -152,10 +162,6 @@ public class ThreadPoolManager {
                 KEEP_ALIVE_TIME,
                 KEEP_ALIVE_TIME_UNIT,
                 mFetchPhotosRunnablesWorkQueue);
-    }
-
-    private String[] extractMediaURLSFromJSONResponse(JSONObject response) {
-        return new String[0];
     }
 
     private static void populateListWithResults(UsersAdapter resultsListAdapter, JSONObject ret,int offest,int count) {
@@ -258,6 +264,15 @@ public class ThreadPoolManager {
         return task;
     }
 
+    public static GetUserRecentMediaTask FetchUserRecentMediaPhotos(String userID, UserPhotos userPhotos,ArrayAdapter adapter,String accessToken){
+        GetUserRecentMediaTask task = sInstance.mFetchUserRecentMediaPhotosWorkQueue.poll();
+        if(task == null){
+            task = new GetUserRecentMediaTask();
+        }
+        task.initGetUserRecentMediaTask(buildURLForUserRecentMedia(userID,accessToken),userPhotos,adapter);
+        sInstance.mFetchPhotosThreadPool.execute(task.getUserRecentMediaTaskRunnable());
+        return task;
+    }
 
     public void handleSearchUserTaskResponse(SearchUserTask task) {
         if(task.getResponseJSON() == null){
@@ -292,7 +307,7 @@ public class ThreadPoolManager {
     }
 
     public void handleGetUserRecentMediaTaskResponse(GetUserRecentMediaTask task){
-        if(task.getUserRecentMediaResponse() == null){
+        if(task.getUserPhotosBitmapArray() == null){
             Log.d(TAG,"cannot fetch user recent media");
         }else{
             Log.d(TAG,"found user recent media");
@@ -307,6 +322,17 @@ public class ThreadPoolManager {
             res = new URL(String.format("%s/users/search?q=%s&access_token=%s",API_URL_PREFIX,username,sAccessToken));
         } catch (MalformedURLException e) {
             Log.e(TAG,"bad url",e);
+            res = null;
+        }
+        return res;
+    }
+
+    private static URL buildURLForUserRecentMedia(String userID,String accessToken){
+        URL res;
+        try{
+            res = new URL(String.format("%s/users/%s/media/recent?access_token=%s",API_URL_PREFIX,userID,accessToken));
+        }catch(MalformedURLException e){
+            Log.d(TAG,"bad url",e);
             res = null;
         }
         return res;

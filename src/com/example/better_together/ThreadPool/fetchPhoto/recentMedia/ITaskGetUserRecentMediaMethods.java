@@ -1,5 +1,6 @@
-package com.example.better_together.ThreadPool.recentMedia;
+package com.example.better_together.ThreadPool.fetchPhoto.recentMedia;
 
+import android.graphics.Bitmap;
 import org.json.JSONObject;
 
 import java.net.URL;
@@ -10,5 +11,5 @@ import java.net.URL;
 public interface ITaskGetUserRecentMediaMethods {
     void setGetUserRecentMediaThread(Thread thread);
     URL getUserRecentMediaURL();
-    public void setUserRecentMediaResponse(JSONObject responseAsJSON);
+    void setGetUserRecentMediaResponse(Bitmap[] photos, String[] captions, String[] creationDates);
 }

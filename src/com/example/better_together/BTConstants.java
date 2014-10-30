@@ -18,6 +18,12 @@ public class BTConstants {
     public static final String JSON_ATTR_USER_PROFILE_PIC_URL = "profile_picture";
     public static final String JSON_ATTR_USER_ID = "id";
     public static final String JSON_ATTR_USER_GROUP_NAME = "group_name";
+    public static final String JSON_ATTR_IMAGES = "images";
+    public static final String JSON_ATTR_STANDARD_RESOLUTION = "standard_resolution";
+    public static final String JSON_ATTR_URL = "url";
+    public static final String JSON_ATTR_CAPTION = "caption";
+    public static final String JSON_ATTR_CAPTION_TEXT = "text";
+    public static final String JSON_ATTR_CAPTION_CREATED_TIME = "created_time";
 
     public static final int SEARCH_USERS_RESULTS_COUNT = 10;
     public static final String INTENT_EXTRA_SEARCH_MORE_USERS = "search_more_users";

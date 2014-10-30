@@ -1,8 +1,6 @@
-package com.example.better_together.ThreadPool.fetchPhoto.fromMemory;
+package com.example.better_together.ThreadPool.fetchPhoto.profilePicture.fromMemory;
 
 import android.graphics.Bitmap;
-
-import java.net.URL;
 
 /**
  * Created by ssdd on 10/29/14.

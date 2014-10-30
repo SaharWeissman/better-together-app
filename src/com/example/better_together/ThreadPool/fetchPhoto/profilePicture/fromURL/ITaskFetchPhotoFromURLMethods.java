@@ -1,9 +1,8 @@
-package com.example.better_together.ThreadPool.fetchPhoto.fromURL;
+package com.example.better_together.ThreadPool.fetchPhoto.profilePicture.fromURL;
 
 import android.graphics.Bitmap;
 
 import java.net.URL;
-import java.util.HashMap;
 
 /**
  * Created by ssdd on 10/23/14.
