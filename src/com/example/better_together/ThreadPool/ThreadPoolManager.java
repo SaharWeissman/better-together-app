@@ -17,13 +17,14 @@ import com.example.better_together.ThreadPool.searchUsers.SearchUserRunnable;
 import com.example.better_together.ThreadPool.searchUsers.SearchUserTask;
 import com.example.better_together.Views.adapters.UsersAdapter;
 import com.example.better_together.Views.models.User;
-import com.example.better_together.Views.models.UserPhotos;
+import com.example.better_together.Views.models.UserPhoto;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Date;
 import java.util.Queue;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -48,15 +49,19 @@ public class ThreadPoolManager {
     private static String mCurrentGroupName;
 
     private final BlockingQueue<Runnable> mSearchUsersRunnablesWorkQueue;
-    private final BlockingQueue<Runnable> mFetchPhotosRunnablesWorkQueue;
+    private final BlockingQueue<Runnable> mFetchProfilePicsRunnablesWorkQueue;
+    private final BlockingQueue<Runnable> mFetchUserPhotosRunnablesWorkQueue;
     private final Handler mHandler;
     private final ThreadPoolExecutor mSearchUsersThreadPool;
+    private final ThreadPoolExecutor mFetchProfilePicsThreadPool;
     private final ThreadPoolExecutor mFetchPhotosThreadPool;
     private Queue<SearchUserTask> mSearchUserTaskWorkQueue;
     private Queue<FetchPhotoFromURLTask> mFetchUserProfilePicsFromURLWorkQueue;
     private Queue<FetchPhotoFromMemoryTask> mFetchUserProfilePicsFromMemoryWorkQueue;
     private Queue<GetUserRecentMediaTask> mFetchUserRecentMediaPhotosWorkQueue;
     private JSONObject mLastSearchUserResult;
+
+    private Object mLock = new Object();
 
     static {
         sInstance = new ThreadPoolManager();
@@ -119,13 +124,13 @@ public class ThreadPoolManager {
                     case BTConstants.MESSAGE_FOUND_USER_RECENT_MEDIA:{
                         Log.d(TAG,"in case MESSAGE_FOUND_USER_RECENT_MEDIA");
                         GetUserRecentMediaTask task = (GetUserRecentMediaTask)message.obj;
-                        Bitmap[] photosBitmapArray = task.getUserPhotosBitmapArray();
-                        String[] photosCaptions = task.getUserPhotosCaptionsArray();
-                        String[] photosCreationDates = task.getUserPhotosCreationDatesArray();
-                        UserPhotos userPhotos = task.getUserPhotos();
-                        userPhotos.setPhotos(photosBitmapArray);
-                        userPhotos.setCaptions(photosCaptions);
-                        userPhotos.setCreationDates(photosCreationDates);
+                        Bitmap photoBitmap = task.getUserPhotosBitmap();
+                        String photoCaption = task.getUserPhotosCaption();
+                        Date photoCreationDate = task.getUserPhotosCreationDate();
+                        UserPhoto userPhotos = task.getUserPhoto();
+                        userPhotos.setPhoto(photoBitmap);
+                        userPhotos.setCaption(photoCaption);
+                        userPhotos.setCreationDate(photoCreationDate);
                         ArrayAdapter adapter = task.getArrayAdapter();
                         adapter.notifyDataSetChanged();
                         break;
@@ -145,7 +150,6 @@ public class ThreadPoolManager {
         // SEARCH USERS
         // queue for runnable tasks
         mSearchUsersRunnablesWorkQueue = new LinkedBlockingQueue<Runnable>();
-        mFetchPhotosRunnablesWorkQueue = new LinkedBlockingQueue<Runnable>();
         // Creates a thread pool manager
         mSearchUsersThreadPool = new ThreadPoolExecutor(
                 NUMBER_OF_CORES,       // Initial pool size
@@ -154,14 +158,25 @@ public class ThreadPoolManager {
                 KEEP_ALIVE_TIME_UNIT,
                 mSearchUsersRunnablesWorkQueue);
 
-        // FETCH PHOTOS
+        // FETCH PROFILE PICS
         //queue for runnable tasks
-        mFetchPhotosThreadPool = new ThreadPoolExecutor(
+        mFetchProfilePicsRunnablesWorkQueue = new LinkedBlockingQueue<Runnable>();
+        mFetchProfilePicsThreadPool = new ThreadPoolExecutor(
                 NUMBER_OF_CORES,
-                NUMBER_OF_CORES,
+                NUMBER_OF_CORES * 2,
                 KEEP_ALIVE_TIME,
                 KEEP_ALIVE_TIME_UNIT,
-                mFetchPhotosRunnablesWorkQueue);
+                mFetchProfilePicsRunnablesWorkQueue);
+
+        // FETCH USER PHOTOS
+        //queue for runnable tasks
+        mFetchUserPhotosRunnablesWorkQueue = new LinkedBlockingQueue<Runnable>();
+        mFetchPhotosThreadPool= new ThreadPoolExecutor(
+                NUMBER_OF_CORES,
+                NUMBER_OF_CORES * 2,
+                KEEP_ALIVE_TIME,
+                KEEP_ALIVE_TIME_UNIT,
+                mFetchUserPhotosRunnablesWorkQueue);
     }
 
     private static void populateListWithResults(UsersAdapter resultsListAdapter, JSONObject ret,int offest,int count) {
@@ -243,7 +258,7 @@ public class ThreadPoolManager {
             Log.d(TAG,"url is null");
         }else{
             fetchPhotoTask.initFetchPhotoTask(url,user,adapter);
-            sInstance.mFetchPhotosThreadPool.execute(fetchPhotoTask.getFetchPhotoRunnable());
+            sInstance.mFetchProfilePicsThreadPool.execute(fetchPhotoTask.getFetchPhotoRunnable());
         }
         return fetchPhotoTask;
     }
@@ -259,18 +274,18 @@ public class ThreadPoolManager {
             Log.d(TAG,"profile pic path is null");
         }else{
             task.initFetchPhotoTask(profilePicPath,user,adapter);
-            sInstance.mFetchPhotosThreadPool.execute(task.getFetchPhotoFromMemorRunnable());
+            sInstance.mFetchProfilePicsThreadPool.execute(task.getFetchPhotoFromMemorRunnable());
         }
         return task;
     }
 
-    public static GetUserRecentMediaTask FetchUserRecentMediaPhotos(String userID, UserPhotos userPhotos,ArrayAdapter adapter,String accessToken){
+    public static GetUserRecentMediaTask FetchUserRecentMediaPhotos(String userID, UserPhoto userPhoto,ArrayAdapter adapter,String accessToken,int index){
         GetUserRecentMediaTask task = sInstance.mFetchUserRecentMediaPhotosWorkQueue.poll();
         if(task == null){
             task = new GetUserRecentMediaTask();
         }
-        task.initGetUserRecentMediaTask(buildURLForUserRecentMedia(userID,accessToken),userPhotos,adapter);
-        sInstance.mFetchPhotosThreadPool.execute(task.getUserRecentMediaTaskRunnable());
+        task.initGetUserRecentMediaTask(buildURLForUserRecentMedia(userID,accessToken),userPhoto,adapter,index);
+        sInstance.mFetchProfilePicsThreadPool.execute(task.getUserRecentMediaTaskRunnable());
         return task;
     }
 
@@ -307,13 +322,9 @@ public class ThreadPoolManager {
     }
 
     public void handleGetUserRecentMediaTaskResponse(GetUserRecentMediaTask task){
-        if(task.getUserPhotosBitmapArray() == null){
-            Log.d(TAG,"cannot fetch user recent media");
-        }else{
-            Log.d(TAG,"found user recent media");
-            Message foundUserRecentMediaMsg = mHandler.obtainMessage(BTConstants.MESSAGE_FOUND_USER_RECENT_MEDIA,task);
-            foundUserRecentMediaMsg.sendToTarget();
-        }
+        Log.d(TAG,"found user recent media");
+        Message foundUserRecentMediaMsg = mHandler.obtainMessage(BTConstants.MESSAGE_FOUND_USER_RECENT_MEDIA,task);
+        foundUserRecentMediaMsg.sendToTarget();
     }
 
     private static URL buildURLForUserName(String username) {

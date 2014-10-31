@@ -3,10 +3,10 @@ package com.example.better_together.ThreadPool.fetchPhoto.recentMedia;
 import android.graphics.Bitmap;
 import android.widget.ArrayAdapter;
 import com.example.better_together.ThreadPool.ThreadPoolManager;
-import com.example.better_together.Views.models.UserPhotos;
-import org.json.JSONObject;
+import com.example.better_together.Views.models.UserPhoto;
 
 import java.net.URL;
+import java.util.Date;
 
 /**
  * Created by ssdd on 10/29/14.
@@ -17,22 +17,23 @@ public class GetUserRecentMediaTask implements ITaskGetUserRecentMediaMethods {
     private final ThreadPoolManager mUserManager;
     private URL mGetUserRecentMediaURL;
     private Thread mCurrentThread;
-    private JSONObject mUserRecentMediaResponse;
     private ArrayAdapter mUserPhotosAdapter;
-    private UserPhotos mUserPhotos;
-    private Bitmap[] mUserPhotosBitmapArray;
-    private String[] mUserPhotosCaptionsArray;
-    private String[] mUserPhotosCreationDatesArray;
+    private UserPhoto mUserPhoto;
+    private Bitmap mUserPhotosBitmap;
+    private String mUserPhotosCaption;
+    private Date mUserPhotosCreationDate;
+    private int mIndex;
 
     public GetUserRecentMediaTask(){
         this.mGetUserRecentMediaRunnable = new GetUserRecentMediaRunnable(this);
         this.mUserManager = ThreadPoolManager.getInstance();
     }
 
-    public void initGetUserRecentMediaTask(URL getUserRecentMediaURL,UserPhotos userPhotos,ArrayAdapter adapter){
+    public void initGetUserRecentMediaTask(URL getUserRecentMediaURL,UserPhoto userPhoto,ArrayAdapter adapter, int index){
         this.mGetUserRecentMediaURL = getUserRecentMediaURL;
         this.mUserPhotosAdapter = adapter;
-        this.mUserPhotos = userPhotos;
+        this.mUserPhoto = userPhoto;
+        this.mIndex = index;
     }
 
     @Override
@@ -46,10 +47,15 @@ public class GetUserRecentMediaTask implements ITaskGetUserRecentMediaMethods {
     }
 
     @Override
-    public void setGetUserRecentMediaResponse(Bitmap[] photos,String[] captions,String[] creationDates) {
-        this.mUserPhotosBitmapArray = photos;
-        this.mUserPhotosCaptionsArray = captions;
-        this.mUserPhotosCreationDatesArray = creationDates;
+    public int getIndex() {
+        return mIndex;
+    }
+
+    @Override
+    public void setGetUserRecentMediaResponse(Bitmap photo,String caption,Date creationDate) {
+        this.mUserPhotosBitmap = photo;
+        this.mUserPhotosCaption = caption;
+        this.mUserPhotosCreationDate = creationDate;
         mUserManager.handleGetUserRecentMediaTaskResponse(this);
     }
 
@@ -57,16 +63,16 @@ public class GetUserRecentMediaTask implements ITaskGetUserRecentMediaMethods {
         return this.mUserPhotosAdapter;
     }
 
-    public Bitmap[] getUserPhotosBitmapArray(){
-        return this.mUserPhotosBitmapArray;
+    public Bitmap getUserPhotosBitmap(){
+        return this.mUserPhotosBitmap;
     }
 
-    public String[] getUserPhotosCaptionsArray(){return this.mUserPhotosCaptionsArray;}
+    public String getUserPhotosCaption(){return this.mUserPhotosCaption;}
 
-    public String[] getUserPhotosCreationDatesArray(){return this.mUserPhotosCreationDatesArray;}
+    public Date getUserPhotosCreationDate(){return this.mUserPhotosCreationDate;}
 
-    public UserPhotos getUserPhotos(){
-        return this.mUserPhotos;
+    public UserPhoto getUserPhoto(){
+        return this.mUserPhoto;
     }
 
     public Runnable getUserRecentMediaTaskRunnable(){

@@ -50,6 +50,7 @@ public class AddUsersToGroupActivity extends Activity implements IViewItemClickL
     private String mAccessToken;
 
     private AlertDialog mAlertDialog;
+    private int mCurrentContentView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,11 +65,18 @@ public class AddUsersToGroupActivity extends Activity implements IViewItemClickL
     }
 
     @Override
-    protected void onNewIntent(Intent intent) {
-        super.onNewIntent(intent);
-        if(intent.getBooleanExtra(BTConstants.INTENT_EXTRA_SEARCH_MORE_USERS,false)){
+    public void setContentView(int layoutResID) {
+        super.setContentView(layoutResID);
+        this.mCurrentContentView = layoutResID;
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(mCurrentContentView == R.layout.users_search_result_list){
             setContentView(R.layout.add_users_to_group);
             initUIComponents();
+        }else{
+            super.onBackPressed();
         }
     }
 

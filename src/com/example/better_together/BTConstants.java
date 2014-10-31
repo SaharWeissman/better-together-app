@@ -20,10 +20,14 @@ public class BTConstants {
     public static final String JSON_ATTR_USER_GROUP_NAME = "group_name";
     public static final String JSON_ATTR_IMAGES = "images";
     public static final String JSON_ATTR_STANDARD_RESOLUTION = "standard_resolution";
+    public static final String JSON_ATTR_LOW_RESOLUTION = "low_resolution";
     public static final String JSON_ATTR_URL = "url";
     public static final String JSON_ATTR_CAPTION = "caption";
     public static final String JSON_ATTR_CAPTION_TEXT = "text";
-    public static final String JSON_ATTR_CAPTION_CREATED_TIME = "created_time";
+    public static final String JSON_ATTR_CREATED_TIME = "created_time";
+
+    public static final String USER_PHOTO_DATE_FORMAT = "MM/dd/yy HH:mm:ss";
+
 
     public static final int SEARCH_USERS_RESULTS_COUNT = 10;
     public static final String INTENT_EXTRA_SEARCH_MORE_USERS = "search_more_users";
@@ -34,10 +38,10 @@ public class BTConstants {
     public static final int MESSAGE_FOUND_RESULTS = 1;
     public static final int MESSAGE_NO_PROFILE_PIC_FROM_URL_FOUND = 2;
     public static final int MESSAGE_FOUND_PROFILE_PIC_FROM_URL = 3;
-    public static final int MESSAGE_NO_PROFILE_PIC_FROM_MEMORY_FOUND = 4;
-    public static final int MESSAGE_FOUND_PROFILE_PIC_FROM_MEMORY = 5;
-    public static final int MESSAGE_FOUND_USER_RECENT_MEDIA = 6;
+    public static final int MESSAGE_FOUND_PROFILE_PIC_FROM_MEMORY = 4;
+    public static final int MESSAGE_FOUND_USER_RECENT_MEDIA = 5;
     public static final int NUM_OF_PHOTOS_PER_USER = 5;
+
     public static String sAppProfilePicDirectoryPrefixPath;
 
     public static void setAppProfilePicDirectoryPrefix(String path){

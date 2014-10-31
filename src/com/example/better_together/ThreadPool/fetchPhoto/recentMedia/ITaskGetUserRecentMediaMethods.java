@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 import org.json.JSONObject;
 
 import java.net.URL;
+import java.util.Date;
 
 /**
  * Created by ssdd on 10/29/14.
@@ -11,5 +12,6 @@ import java.net.URL;
 public interface ITaskGetUserRecentMediaMethods {
     void setGetUserRecentMediaThread(Thread thread);
     URL getUserRecentMediaURL();
-    void setGetUserRecentMediaResponse(Bitmap[] photos, String[] captions, String[] creationDates);
+    int getIndex();
+    void setGetUserRecentMediaResponse(Bitmap photo, String caption, Date creationDate);
 }

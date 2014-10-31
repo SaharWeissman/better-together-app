@@ -9,7 +9,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/imgV_user_photo"
             android:layout_below="@+id/txtV_user_photo_caption" android:layout_alignParentLeft="true"
-            />
+            android:paddingBottom="5dp"/>
     <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
