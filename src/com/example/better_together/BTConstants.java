@@ -40,6 +40,8 @@ public class BTConstants {
     public static final int MESSAGE_FOUND_PROFILE_PIC_FROM_URL = 3;
     public static final int MESSAGE_FOUND_PROFILE_PIC_FROM_MEMORY = 4;
     public static final int MESSAGE_FOUND_USER_RECENT_MEDIA = 5;
+    public static final int MESSAGE_FOUND_USER_PIC_FROM_URL = 6;
+
     public static final int NUM_OF_PHOTOS_PER_USER = 5;
 
     public static String sAppProfilePicDirectoryPrefixPath;

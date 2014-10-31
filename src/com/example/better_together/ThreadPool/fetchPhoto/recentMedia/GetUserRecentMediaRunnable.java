@@ -2,7 +2,6 @@ package com.example.better_together.ThreadPool.fetchPhoto.recentMedia;
 
 import android.graphics.Bitmap;
 import android.os.Process;
-import android.text.TextUtils;
 import android.util.Log;
 import com.example.better_together.BTConstants;
 import com.example.better_together.network.HttpRequestHelper;
@@ -12,9 +11,6 @@ import org.json.JSONObject;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -45,16 +41,16 @@ public class GetUserRecentMediaRunnable implements Runnable {
         try {
             JSONArray imagesJSONS = responseAsJson.getJSONArray(BTConstants.JSON_ATTR_DATA);
             JSONObject imageJSON = imagesJSONS.getJSONObject(index);
-            Bitmap image = extractBitmapFromImageJSON(imageJSON);
-            String caption = extractCaptionFromImageJSON(imageJSON);
-            Date creationdate = extractCreationDateFromImageJSON(imageJSON);
-            mUserRecentMediaTask.setGetUserRecentMediaResponse(image,caption,creationdate);
+            URL imageURL = extractPhotoURLFromImageJSON(imageJSON);
+            String caption = extractCaptionFromJSON(imageJSON);
+            Date creationDate = extractCreationDateFromJSON(imageJSON);
+            mUserRecentMediaTask.setGetUserRecentMediaResponse(imageURL,caption,creationDate);
         }catch (JSONException e){
             Log.e(TAG,"cannot get image json");
         }
     }
 
-    private Date extractCreationDateFromImageJSON(JSONObject imageJSON) {
+    private Date extractCreationDateFromJSON(JSONObject imageJSON) {
         Date res = null;
         try{
             String createdTimeTimestamp = imageJSON.getString(BTConstants.JSON_ATTR_CREATED_TIME);
@@ -65,7 +61,7 @@ public class GetUserRecentMediaRunnable implements Runnable {
         return res;
     }
 
-    private String extractCaptionFromImageJSON(JSONObject imageJSON) {
+    private String extractCaptionFromJSON(JSONObject imageJSON) {
         String res = null;
         try{
             if(imageJSON != null) {
@@ -81,14 +77,13 @@ public class GetUserRecentMediaRunnable implements Runnable {
         return res;
     }
 
-    private Bitmap extractBitmapFromImageJSON(JSONObject imageJSON) {
-        Bitmap res = null;
+    private URL extractPhotoURLFromImageJSON(JSONObject imageJSON) {
+        URL res = null;
         try{
             JSONObject images = imageJSON.getJSONObject(BTConstants.JSON_ATTR_IMAGES);
             JSONObject standardResImage = images.getJSONObject(BTConstants.JSON_ATTR_LOW_RESOLUTION);
             String urlStr = standardResImage.getString(BTConstants.JSON_ATTR_URL);
-            URL url = new URL(urlStr);
-            res = mHttpRequestHelper.fetchPhotoFromURL(url);
+            res = new URL(urlStr);
         }catch(JSONException e){
             Log.e(TAG,"unable to extract image url from json",e);
         } catch (MalformedURLException e) {

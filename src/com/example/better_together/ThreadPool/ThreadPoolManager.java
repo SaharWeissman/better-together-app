@@ -107,7 +107,7 @@ public class ThreadPoolManager {
                         Log.d(TAG,"in case MESSAGE_FOUND_PROFILE_PIC_FROM_URL");
                         FetchPhotoFromURLTask task = (FetchPhotoFromURLTask)message.obj;
                         User user = task.getUser();
-                        UsersAdapter adapter = task.getUsersAdapter();
+                        ArrayAdapter adapter = task.getUsersAdapter();
                         user.setProfilePic(task.getFetchPhotoResponse());
                         adapter.notifyDataSetChanged();
                         break;
@@ -124,14 +124,23 @@ public class ThreadPoolManager {
                     case BTConstants.MESSAGE_FOUND_USER_RECENT_MEDIA:{
                         Log.d(TAG,"in case MESSAGE_FOUND_USER_RECENT_MEDIA");
                         GetUserRecentMediaTask task = (GetUserRecentMediaTask)message.obj;
-                        Bitmap photoBitmap = task.getUserPhotosBitmap();
+                        URL photoURL = task.getUserPhotoURL();
                         String photoCaption = task.getUserPhotosCaption();
                         Date photoCreationDate = task.getUserPhotosCreationDate();
-                        UserPhoto userPhotos = task.getUserPhoto();
-                        userPhotos.setPhoto(photoBitmap);
-                        userPhotos.setCaption(photoCaption);
-                        userPhotos.setCreationDate(photoCreationDate);
+                        UserPhoto userPhoto = task.getUserPhoto();
+                        userPhoto.setCaption(photoCaption);
+                        userPhoto.setCreationDate(photoCreationDate);
                         ArrayAdapter adapter = task.getArrayAdapter();
+                        adapter.notifyDataSetChanged();
+                        fetchUserPhotoFromURL(photoURL,userPhoto,adapter);
+                        break;
+                    }
+                    case BTConstants.MESSAGE_FOUND_USER_PIC_FROM_URL:{
+                        Log.d(TAG,"in case MESSAGE_FOUND_USER_RECENT_MEDIA");
+                        FetchPhotoFromURLTask task = (FetchPhotoFromURLTask)message.obj;
+                        UserPhoto userPhoto = task.getUserPhoto();
+                        userPhoto.setPhoto(task.getFetchPhotoResponse());
+                        ArrayAdapter adapter = task.getUsersAdapter();
                         adapter.notifyDataSetChanged();
                         break;
                     }
@@ -177,6 +186,17 @@ public class ThreadPoolManager {
                 KEEP_ALIVE_TIME,
                 KEEP_ALIVE_TIME_UNIT,
                 mFetchUserPhotosRunnablesWorkQueue);
+    }
+
+    private void fetchUserPhotoFromURL(URL photoURL, UserPhoto userPhoto, ArrayAdapter adapter) {
+        FetchPhotoFromURLTask task = mFetchUserProfilePicsFromURLWorkQueue.poll();
+
+        if(task == null){
+            task = new FetchPhotoFromURLTask();
+        }
+
+        task.initFetchPhotoTask(photoURL,userPhoto.getUser(),adapter, FetchPhotoFromURLTask.PhotoType.USER_PHOTO,userPhoto);
+        mFetchPhotosThreadPool.execute(task.getFetchPhotoRunnable());
     }
 
     private static void populateListWithResults(UsersAdapter resultsListAdapter, JSONObject ret,int offest,int count) {
@@ -257,7 +277,7 @@ public class ThreadPoolManager {
         if(url == null){
             Log.d(TAG,"url is null");
         }else{
-            fetchPhotoTask.initFetchPhotoTask(url,user,adapter);
+            fetchPhotoTask.initFetchPhotoTask(url,user,adapter, FetchPhotoFromURLTask.PhotoType.PROFILE_PIC);
             sInstance.mFetchProfilePicsThreadPool.execute(fetchPhotoTask.getFetchPhotoRunnable());
         }
         return fetchPhotoTask;
@@ -306,8 +326,24 @@ public class ThreadPoolManager {
             Log.d(TAG, "response is null");
         }else{
             Log.d(TAG,"found profile picture");
-            Message fetchProfilePicMessage = mHandler.obtainMessage(BTConstants.MESSAGE_FOUND_PROFILE_PIC_FROM_URL,task);
-            fetchProfilePicMessage.sendToTarget();
+            FetchPhotoFromURLTask.PhotoType photoType = task.getPhotoType();
+            switch (photoType){
+                case PROFILE_PIC:{
+                    Log.d(TAG,"in PROFILE_PIC case");
+                    Message fetchProfilePicMessage = mHandler.obtainMessage(BTConstants.MESSAGE_FOUND_PROFILE_PIC_FROM_URL,task);
+                    fetchProfilePicMessage.sendToTarget();
+                    break;
+                }
+                case USER_PHOTO:{
+                    Message fetchUserPhotoMessage = mHandler.obtainMessage(BTConstants.MESSAGE_FOUND_USER_PIC_FROM_URL,task);
+                    fetchUserPhotoMessage.sendToTarget();
+                    Log.d(TAG,"in USER_PHOTO case");
+                }
+                default:{
+                    Log.d(TAG,"in default case");
+                    break;
+                }
+            }
         }
     }
 

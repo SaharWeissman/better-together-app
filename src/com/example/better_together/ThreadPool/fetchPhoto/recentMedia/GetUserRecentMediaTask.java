@@ -19,7 +19,7 @@ public class GetUserRecentMediaTask implements ITaskGetUserRecentMediaMethods {
     private Thread mCurrentThread;
     private ArrayAdapter mUserPhotosAdapter;
     private UserPhoto mUserPhoto;
-    private Bitmap mUserPhotosBitmap;
+    private URL mUserPhotoURL;
     private String mUserPhotosCaption;
     private Date mUserPhotosCreationDate;
     private int mIndex;
@@ -52,8 +52,8 @@ public class GetUserRecentMediaTask implements ITaskGetUserRecentMediaMethods {
     }
 
     @Override
-    public void setGetUserRecentMediaResponse(Bitmap photo,String caption,Date creationDate) {
-        this.mUserPhotosBitmap = photo;
+    public void setGetUserRecentMediaResponse(URL photoURL,String caption,Date creationDate) {
+        this.mUserPhotoURL = photoURL;
         this.mUserPhotosCaption = caption;
         this.mUserPhotosCreationDate = creationDate;
         mUserManager.handleGetUserRecentMediaTaskResponse(this);
@@ -63,8 +63,8 @@ public class GetUserRecentMediaTask implements ITaskGetUserRecentMediaMethods {
         return this.mUserPhotosAdapter;
     }
 
-    public Bitmap getUserPhotosBitmap(){
-        return this.mUserPhotosBitmap;
+    public URL getUserPhotoURL(){
+        return this.mUserPhotoURL;
     }
 
     public String getUserPhotosCaption(){return this.mUserPhotosCaption;}

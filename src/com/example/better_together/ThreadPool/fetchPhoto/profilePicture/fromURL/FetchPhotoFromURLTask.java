@@ -1,9 +1,11 @@
 package com.example.better_together.ThreadPool.fetchPhoto.profilePicture.fromURL;
 
 import android.graphics.Bitmap;
+import android.widget.ArrayAdapter;
 import com.example.better_together.ThreadPool.ThreadPoolManager;
 import com.example.better_together.Views.adapters.UsersAdapter;
 import com.example.better_together.Views.models.User;
+import com.example.better_together.Views.models.UserPhoto;
 
 import java.net.URL;
 
@@ -12,13 +14,22 @@ import java.net.URL;
  */
 public class FetchPhotoFromURLTask implements ITaskFetchPhotoFromURLMethods {
 
+    // to distinguish later in thread pool whether this picture is profile pic. of user
+    // or recent media picture of user
+    public enum PhotoType{
+        PROFILE_PIC,
+        USER_PHOTO
+    }
+
     private final FetchPhotoFromURLRunnable mFetchPhotoRunnable;
     private final ThreadPoolManager mPhotosManager;
     private Thread mCurrentThread;
     private Bitmap mFetchPhotoResult;
     private URL mFetchPhotoURL;
     private User mUser;
-    private UsersAdapter mUsersAdapter;
+    private ArrayAdapter mUsersAdapter;
+    private PhotoType mPhotoType;
+    private UserPhoto mUserPhoto;
 
     public FetchPhotoFromURLTask(){
         mFetchPhotoRunnable = new FetchPhotoFromURLRunnable(this);
@@ -50,17 +61,31 @@ public class FetchPhotoFromURLTask implements ITaskFetchPhotoFromURLMethods {
         return this.mFetchPhotoRunnable;
     }
 
-    public void initFetchPhotoTask(URL fetchPhotoURL,User user,UsersAdapter adapter){
+    public void initFetchPhotoTask(URL fetchPhotoURL,User user,ArrayAdapter adapter,PhotoType type){
         this.mFetchPhotoURL = fetchPhotoURL;
         this.mUser = user;
         this.mUsersAdapter = adapter;
+        this.mPhotoType = type;
+    }
+
+    public void initFetchPhotoTask(URL fetchPhotoURL,User user,ArrayAdapter adapter,PhotoType type, UserPhoto userPhoto){
+        this.mUserPhoto = userPhoto;
+        initFetchPhotoTask(fetchPhotoURL,user,adapter,type);
     }
 
     public User getUser(){
         return this.mUser;
     }
 
-    public UsersAdapter getUsersAdapter(){
+    public ArrayAdapter getUsersAdapter(){
         return this.mUsersAdapter;
+    }
+
+    public PhotoType getPhotoType(){
+        return mPhotoType;
+    }
+
+    public UserPhoto getUserPhoto(){
+        return mUserPhoto;
     }
 }

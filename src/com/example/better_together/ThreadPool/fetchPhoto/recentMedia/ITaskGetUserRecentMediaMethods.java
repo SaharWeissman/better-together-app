@@ -13,5 +13,5 @@ public interface ITaskGetUserRecentMediaMethods {
     void setGetUserRecentMediaThread(Thread thread);
     URL getUserRecentMediaURL();
     int getIndex();
-    void setGetUserRecentMediaResponse(Bitmap photo, String caption, Date creationDate);
+    void setGetUserRecentMediaResponse(URL photo, String caption, Date creationDate);
 }
