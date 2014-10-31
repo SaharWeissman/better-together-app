@@ -6,14 +6,14 @@ import com.example.better_together.BTConstants;
 /**
  * Created by ssdd on 10/29/14.
  */
-public class UserPhotos {
+public class UserPhoto {
 
     private User mUser;
     private Bitmap[] mPhotos = new Bitmap[BTConstants.NUM_OF_PHOTOS_PER_USER];
     private String[] mCaptions = new String[BTConstants.NUM_OF_PHOTOS_PER_USER];
     private String[] mCreationDates = new String[BTConstants.NUM_OF_PHOTOS_PER_USER];
 
-    public UserPhotos(User user, Bitmap[] photos,String[] captions, String[] creationDates){
+    public UserPhoto(User user, Bitmap[] photos, String[] captions, String[] creationDates){
         this.mUser = user;
         this.mPhotos = photos;
         this.mCaptions = captions;
