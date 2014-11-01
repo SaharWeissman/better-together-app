@@ -5,6 +5,7 @@ import android.os.Process;
 import android.util.Log;
 import com.example.better_together.BTConstants;
 import com.example.better_together.network.HttpRequestHelper;
+import org.apache.http.HttpStatus;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -39,14 +40,20 @@ public class GetUserRecentMediaRunnable implements Runnable {
         JSONObject responseAsJson = mHttpRequestHelper.makeGetRequest(userRecentMediaURL);
         int index = mUserRecentMediaTask.getIndex(); //index of image
         try {
-            JSONArray imagesJSONS = responseAsJson.getJSONArray(BTConstants.JSON_ATTR_DATA);
-            JSONObject imageJSON = imagesJSONS.getJSONObject(index);
-            URL imageURL = extractPhotoURLFromImageJSON(imageJSON);
-            String caption = extractCaptionFromJSON(imageJSON);
-            Date creationDate = extractCreationDateFromJSON(imageJSON);
-            mUserRecentMediaTask.setGetUserRecentMediaResponse(imageURL,caption,creationDate);
-        }catch (JSONException e){
-            Log.e(TAG,"cannot get image json");
+            if(responseAsJson.optJSONArray(BTConstants.JSON_ATTR_DATA) != null) {
+                JSONArray imagesJSONS = responseAsJson.optJSONArray(BTConstants.JSON_ATTR_DATA);
+                JSONObject imageJSON = imagesJSONS.getJSONObject(index);
+                URL imageURL = extractPhotoURLFromImageJSON(imageJSON);
+                String caption = extractCaptionFromJSON(imageJSON);
+                Date creationDate = extractCreationDateFromJSON(imageJSON);
+                mUserRecentMediaTask.setGetUserRecentMediaResponse(imageURL, caption, creationDate);
+            }else if(responseAsJson.getInt(BTConstants.HTTP_STATUS_CODE) == HttpStatus.SC_BAD_REQUEST){
+                Log.d(TAG,"got bad request code");
+                mUserRecentMediaTask.setGetUserRecentMediaResponse(null, "BAD REQUEST", null);
+            }
+        }catch (JSONException e) {
+            Log.e(TAG, "cannot get image json");
+            mUserRecentMediaTask.setGetUserRecentMediaResponse(null, "JSONException", null);
         }
     }
 

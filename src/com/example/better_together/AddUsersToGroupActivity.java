@@ -248,15 +248,12 @@ public class AddUsersToGroupActivity extends Activity implements IViewItemClickL
             boolean needToGenerateUUIDAndSave = true;
             String username = user.getUserName();
             String profilePicsMappingsAsString = mSharedPrefHelper.readString(BTConstants.SHARED_PREF_KEY_PROFILE_PICS_MAPPING);
-            JSONObject profilePicsMappings = new JSONObject();
-            if(TextUtils.isEmpty(profilePicsMappingsAsString)){
-                profilePicsMappings.put(BTConstants.SHARED_PREF_KEY_PROFILE_PICS_MAPPING,new JSONArray());
-            }else{
-                profilePicsMappings = new JSONObject(profilePicsMappingsAsString);
+            JSONArray profilePicsMappings = new JSONArray();
+            if(!TextUtils.isEmpty(profilePicsMappingsAsString)){
+                profilePicsMappings = new JSONArray(profilePicsMappingsAsString);
             }
-            JSONArray usersToPicsMappingArray = profilePicsMappings.getJSONArray(BTConstants.SHARED_PREF_KEY_PROFILE_PICS_MAPPING);
-            for(int i =0; i < usersToPicsMappingArray.length();i++){
-                JSONObject userToPicMapping = usersToPicsMappingArray.getJSONObject(i);
+            for(int i =0; i < profilePicsMappings.length();i++){
+                JSONObject userToPicMapping = profilePicsMappings.getJSONObject(i);
                 if(userToPicMapping.getString(BTConstants.KEY_USERNAME).equals(username)){
                     needToGenerateUUIDAndSave = false;
                     filePathName = userToPicMapping.getString(BTConstants.KEY_PROFILE_PICTURE_PATH);
@@ -281,7 +278,8 @@ public class AddUsersToGroupActivity extends Activity implements IViewItemClickL
                     JSONObject userToPicMapping = new JSONObject();
                     userToPicMapping.put(BTConstants.KEY_USERNAME,user.getUserName());
                     userToPicMapping.put(BTConstants.KEY_PROFILE_PICTURE_PATH,filePathName);
-                    usersToPicsMappingArray.put(userToPicMapping);
+                    profilePicsMappings.put(userToPicMapping);
+                    mSharedPrefHelper.writeString(BTConstants.SHARED_PREF_KEY_PROFILE_PICS_MAPPING,profilePicsMappings.toString());
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                     filePathName = null;

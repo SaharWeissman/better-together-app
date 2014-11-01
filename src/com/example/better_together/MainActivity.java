@@ -15,6 +15,8 @@ import android.widget.Button;
 import android.widget.Toast;
 import com.example.better_together.storage.SharedPrefStorage;
 
+import java.io.File;
+
 public class MainActivity extends Activity {
 
     //============== CONSTANTS ============================
@@ -107,7 +109,16 @@ public class MainActivity extends Activity {
 
     private void clearAllGroups() {
         mSharedPrefStorage.writeString(BTConstants.SHARED_PREF_KEY_GROUPS, "");
+        mSharedPrefStorage.writeString(BTConstants.SHARED_PREF_KEY_PROFILE_PICS_MAPPING, "");
+        deleteAllProfilePics();
         Log.d(TAG,"cleared all groups");
+    }
+
+    private void deleteAllProfilePics() {
+        File directory = getDir(BTConstants.PROFILE_PICTURES_DIRECTORY, Context.MODE_PRIVATE);
+        for (File profilePicFile : directory.listFiles()){
+            profilePicFile.delete();
+        }
     }
 
     private void handleAccessToken(Intent intent) {

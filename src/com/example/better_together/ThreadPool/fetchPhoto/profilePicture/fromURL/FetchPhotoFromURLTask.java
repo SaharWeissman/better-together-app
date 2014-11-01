@@ -57,6 +57,11 @@ public class FetchPhotoFromURLTask implements ITaskFetchPhotoFromURLMethods {
         return this.mFetchPhotoResult;
     }
 
+    @Override
+    public User getUser(){
+        return this.mUser;
+    }
+
     public Runnable getFetchPhotoRunnable(){
         return this.mFetchPhotoRunnable;
     }
@@ -71,10 +76,6 @@ public class FetchPhotoFromURLTask implements ITaskFetchPhotoFromURLMethods {
     public void initFetchPhotoTask(URL fetchPhotoURL,User user,ArrayAdapter adapter,PhotoType type, UserPhoto userPhoto){
         this.mUserPhoto = userPhoto;
         initFetchPhotoTask(fetchPhotoURL,user,adapter,type);
-    }
-
-    public User getUser(){
-        return this.mUser;
     }
 
     public ArrayAdapter getUsersAdapter(){

@@ -1,6 +1,7 @@
 package com.example.better_together.ThreadPool.fetchPhoto.profilePicture.fromURL;
 
 import android.graphics.Bitmap;
+import com.example.better_together.Views.models.User;
 
 import java.net.URL;
 
@@ -12,4 +13,5 @@ public interface ITaskFetchPhotoFromURLMethods {
     void setFetchPhotoFromURLResult(Bitmap result);
     URL getFetchPhotoURL();
     Bitmap getFetchPhotoResponse();
+    User getUser();
 }

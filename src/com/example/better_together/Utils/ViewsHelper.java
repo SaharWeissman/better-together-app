@@ -1,6 +1,5 @@
 package com.example.better_together.Utils;
 
-import android.text.TextUtils;
 import android.util.Log;
 import android.widget.ListView;
 import com.example.better_together.Views.adapters.GroupsAdapter;
@@ -21,22 +20,22 @@ public class ViewsHelper {
     public static void populateListWithGroups(ListView list,String iGroupsAsString){
         String groupsAsString = iGroupsAsString;
         GroupsAdapter adapter = (GroupsAdapter)list.getAdapter();
-        if(TextUtils.isEmpty(groupsAsString)){
-            Log.d(TAG, "no existing groups");
-            adapter.add(new Group("NO EXISTING GROUPS",-1,null));
-            return;
-        }
         try{
             JSONArray groupsJSONArray = new JSONArray(groupsAsString);
-            for(int i =0; i < groupsJSONArray.length(); i++){
-                JSONObject groupJSON = groupsJSONArray.getJSONObject(i); //specific group
-                Iterator<String> groupJSONKeys = groupJSON.keys();
-                while(groupJSONKeys.hasNext()){
-                    String groupName = groupJSONKeys.next();
-                    JSONArray usersInGroup = groupJSON.getJSONArray(groupName);
-                    Group group = new Group(groupName,usersInGroup.length(),usersInGroup);
-                    adapter.add(group);
-                    break;
+            if(groupsJSONArray.length() == 0){
+                adapter.add(new Group("No Groups Exist",-1,new JSONArray()));
+            }else {
+                for (int i = 0; i < groupsJSONArray.length(); i++) {
+                    JSONObject groupJSON = groupsJSONArray.getJSONObject(i); //specific group
+                    Iterator<String> groupJSONKeys = groupJSON.keys();
+                    while (groupJSONKeys.hasNext()) {
+                        String groupName = groupJSONKeys.next();
+                        JSONArray usersInGroup = groupJSON.getJSONArray(groupName);
+                        Group group = new Group(groupName, usersInGroup.length(), usersInGroup);
+                        adapter.add(group);
+                        adapter.notifyDataSetChanged();
+                        break;
+                    }
                 }
             }
         }catch(JSONException e){

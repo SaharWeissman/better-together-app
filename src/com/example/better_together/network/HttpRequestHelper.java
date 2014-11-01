@@ -26,17 +26,17 @@ public class HttpRequestHelper implements IHttpRequestHelper {
 
     @Override
     public JSONObject makeGetRequest(URL url) {
-        JSONObject res = null;
+        JSONObject res = new JSONObject();
         if(url != null){
             try {
                 HttpURLConnection urlConnection = (HttpURLConnection)url.openConnection();
                 int responseCode = urlConnection.getResponseCode();
                 Log.d(TAG,"got responseCode: " + responseCode);
+                res.put(BTConstants.HTTP_STATUS_CODE, responseCode);
                 if(responseCode == HttpStatus.SC_OK) {
                     String responseString = readStream(urlConnection.getInputStream());
                     Log.d(TAG, "got response: " + responseString);
                     res = new JSONObject(responseString);
-//                    tryFetchingProfilePics(res,0, BTConstants.SEARCH_USERS_RESULTS_COUNT);
                 }
             } catch (IOException e) {
                 Log.e(TAG,"caught IOException",e);

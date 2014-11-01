@@ -132,7 +132,9 @@ public class ThreadPoolManager {
                         userPhoto.setCreationDate(photoCreationDate);
                         ArrayAdapter adapter = task.getArrayAdapter();
                         adapter.notifyDataSetChanged();
-                        fetchUserPhotoFromURL(photoURL,userPhoto,adapter);
+                        if(photoURL != null) {
+                            fetchUserPhotoFromURL(photoURL, userPhoto, adapter);
+                        }
                         break;
                     }
                     case BTConstants.MESSAGE_FOUND_USER_PIC_FROM_URL:{

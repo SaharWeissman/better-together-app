@@ -3,6 +3,7 @@ package com.example.better_together.ThreadPool.fetchPhoto.profilePicture.fromURL
 import android.graphics.Bitmap;
 import android.os.Process;
 import android.util.Log;
+import com.example.better_together.Views.models.User;
 import com.example.better_together.network.HttpRequestHelper;
 
 import java.net.URL;
@@ -28,6 +29,7 @@ public class FetchPhotoFromURLRunnable implements Runnable {
         mFetchPhotoTask.setFetchPhotoFromURLThread(Thread.currentThread());
 
         URL fetchPhotoURL = mFetchPhotoTask.getFetchPhotoURL();
+        User user = mFetchPhotoTask.getUser();
         if(fetchPhotoURL == null){
             throw new IllegalArgumentException("fetch photo url cannot be null");
         }
