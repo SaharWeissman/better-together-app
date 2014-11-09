@@ -10,9 +10,13 @@
             android:layout_height="wrap_content"
             android:text="Group's Name"
             android:id="@+id/txtV_group_name"/>
-    <GridView
+    <com.example.better_together.Views.AutoGridView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/gridV_users_photos" android:numColumns="2"
+            android:layout_height="match_parent"
+            android:id="@+id/gridV_users_photos"
+            android:numColumns="@integer/user_photos_num_columns"
+            android:stretchMode="columnWidth"
+            android:horizontalSpacing="3dp"
+            android:verticalSpacing="5dp"
             />
 </LinearLayout>

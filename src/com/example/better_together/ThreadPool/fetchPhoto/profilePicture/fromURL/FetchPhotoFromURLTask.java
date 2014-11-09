@@ -6,6 +6,7 @@ import com.example.better_together.ThreadPool.ThreadPoolManager;
 import com.example.better_together.Views.adapters.UsersAdapter;
 import com.example.better_together.Views.models.User;
 import com.example.better_together.Views.models.UserPhoto;
+import com.example.better_together.storage.SharedPrefStorage;
 
 import java.net.URL;
 

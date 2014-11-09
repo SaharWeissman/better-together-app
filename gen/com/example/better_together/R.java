@@ -14,28 +14,67 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int btn_back=0x7f05000a;
-        public static final int btn_back_user=0x7f050006;
-        public static final int btn_clear=0x7f050009;
-        public static final int btn_clear_username=0x7f050005;
-        public static final int btn_create_new_groups=0x7f05000c;
-        public static final int btn_exit=0x7f05000e;
-        public static final int btn_fetch_photos=0x7f05000d;
-        public static final int btn_save=0x7f050008;
-        public static final int btn_search_user=0x7f050004;
-        public static final int btn_show_existing_groups=0x7f05000b;
-        public static final int edTxt_add_user=0x7f050003;
-        public static final int edTxt_group_name=0x7f050007;
-        public static final int txtV_add_user=0x7f050002;
-        public static final int txtV_enter_group_name =0x7f050001;
-        public static final int txtV_group_name_pre=0x7f050000;
+        public static final int btn_back=0x7f06000c;
+        public static final int btn_back_user=0x7f060006;
+        public static final int btn_clear=0x7f06000b;
+        public static final int btn_clear_username=0x7f060005;
+        public static final int btn_create_new_groups=0x7f06001f;
+        public static final int btn_exit=0x7f060021;
+        public static final int btn_fetch_photos=0x7f060020;
+        public static final int btn_save=0x7f06000a;
+        public static final int btn_search_user=0x7f060004;
+        public static final int btn_show_existing_groups=0x7f06001e;
+        public static final int edTxt_add_user=0x7f060003;
+        public static final int edTxt_group_name=0x7f060009;
+        public static final int edTxt_new_group_name=0x7f060008;
+        public static final int gridV_users_photos=0x7f060027;
+        public static final int imgV_user_photo=0x7f060017;
+        public static final int imgV_user_photo_profile_pic=0x7f060019;
+        public static final int imgv_profile_pic=0x7f060011;
+        public static final int listV_exisitng_groups=0x7f060023;
+        public static final int listV_users_in_group=0x7f060025;
+        public static final int listv_fetch_photos_groups=0x7f06000e;
+        public static final int listv_users_search_result=0x7f060029;
+        public static final int textView=0x7f06000d;
+        public static final int txtV_add_user=0x7f060002;
+        public static final int txtV_enter_group_name=0x7f060001;
+        public static final int txtV_existing_group_name=0x7f06000f;
+        public static final int txtV_existing_groups_header=0x7f060022;
+        public static final int txtV_group_members_num=0x7f060010;
+        public static final int txtV_group_name=0x7f060026;
+        public static final int txtV_group_name_pre=0x7f060000;
+        public static final int txtV_new_group_name_header=0x7f060007;
+        public static final int txtV_user_bio=0x7f060015;
+        public static final int txtV_user_full_name=0x7f060014;
+        public static final int txtV_user_id=0x7f060012;
+        public static final int txtV_user_photo_caption=0x7f060018;
+        public static final int txtV_user_photo_create_time=0x7f06001b;
+        public static final int txtV_user_photo_likes=0x7f06001d;
+        public static final int txtV_user_photo_likes_count=0x7f06001c;
+        public static final int txtV_user_photo_username=0x7f06001a;
+        public static final int txtV_user_website=0x7f060016;
+        public static final int txtV_username=0x7f060013;
+        public static final int txtV_users_group_name_header=0x7f060024;
+        public static final int users_search_result_header=0x7f060028;
+    }
+    public static final class integer {
+        public static final int user_photos_num_columns=0x7f040000;
     }
     public static final class layout {
         public static final int add_users_to_group=0x7f030000;
-        public static final int create_groups=0x7f030001;
-        public static final int main=0x7f030002;
+        public static final int change_group_name_layout=0x7f030001;
+        public static final int create_groups=0x7f030002;
+        public static final int fetch_photos_groups=0x7f030003;
+        public static final int item_group=0x7f030004;
+        public static final int item_user=0x7f030005;
+        public static final int item_user_photo=0x7f030006;
+        public static final int main=0x7f030007;
+        public static final int show_existing_groups=0x7f030008;
+        public static final int users_in_group=0x7f030009;
+        public static final int users_photos=0x7f03000a;
+        public static final int users_search_result_list=0x7f03000b;
     }
     public static final class string {
-        public static final int app_name=0x7f040000;
+        public static final int app_name=0x7f050000;
     }
 }

@@ -11,6 +11,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import com.example.better_together.ThreadPool.ThreadPoolManager;
 import com.example.better_together.Utils.ViewsHelper;
+import com.example.better_together.Views.AutoGridView;
 import com.example.better_together.Views.IViewItemClickListener;
 import com.example.better_together.Views.adapters.GroupsAdapter;
 import com.example.better_together.Views.adapters.UsersPhotosAdapter;
@@ -76,7 +77,7 @@ public class FetchPhotosActivity extends Activity implements IViewItemClickListe
         setContentView(R.layout.users_photos);
         TextView groupName = (TextView)findViewById(R.id.txtV_group_name);
         groupName.setText(group.getGroupName());
-        GridView usersPhotosGridView = (GridView)findViewById(R.id.gridV_users_photos);
+        AutoGridView usersPhotosGridView = (AutoGridView)findViewById(R.id.gridV_users_photos);
         ArrayList<UserPhoto> userPhotos = new ArrayList<UserPhoto>();
         UsersPhotosAdapter adapter = new UsersPhotosAdapter(this,userPhotos,usersInGroup.length(),this);
         createUserPhotos(usersInGroup,userPhotos,adapter);
@@ -88,7 +89,7 @@ public class FetchPhotosActivity extends Activity implements IViewItemClickListe
             try{
                 JSONObject userJSON = usersInGroup.getJSONObject(i % usersInGroup.length());
                 User user = User.createFromJSON(userJSON);
-                UserPhoto userPhoto = new UserPhoto(user,null,null,null);
+                UserPhoto userPhoto = new UserPhoto(user,null,null,null,null);
                 userPhotos.add(userPhoto);
                 ThreadPoolManager.fetchUserProfilePicFromMemory(BTConstants.sAppProfilePicDirectoryPrefixPath + user.getProfilePicURL() + ".png",user,adapter);
                 ThreadPoolManager.FetchUserRecentMediaPhotos(user.getID(),userPhoto,adapter,mAccessToken,i / usersInGroup.length());

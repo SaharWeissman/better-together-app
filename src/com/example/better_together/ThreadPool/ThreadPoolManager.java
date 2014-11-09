@@ -2,7 +2,6 @@ package com.example.better_together.ThreadPool;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
@@ -125,11 +124,13 @@ public class ThreadPoolManager {
                         Log.d(TAG,"in case MESSAGE_FOUND_USER_RECENT_MEDIA");
                         GetUserRecentMediaTask task = (GetUserRecentMediaTask)message.obj;
                         URL photoURL = task.getUserPhotoURL();
-                        String photoCaption = task.getUserPhotosCaption();
-                        Date photoCreationDate = task.getUserPhotosCreationDate();
+                        String photoCaption = task.getUserPhotoCaption();
+                        Date photoCreationDate = task.getUserPhotoCreationDate();
+                        String photoLikesNum = task.getUserPhotoLikesNum();
                         UserPhoto userPhoto = task.getUserPhoto();
                         userPhoto.setCaption(photoCaption);
                         userPhoto.setCreationDate(photoCreationDate);
+                        userPhoto.setLikesNum(photoLikesNum);
                         ArrayAdapter adapter = task.getArrayAdapter();
                         adapter.notifyDataSetChanged();
                         if(photoURL != null) {

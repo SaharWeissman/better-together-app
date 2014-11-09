@@ -29,10 +29,10 @@ public class FetchPhotoFromURLRunnable implements Runnable {
         mFetchPhotoTask.setFetchPhotoFromURLThread(Thread.currentThread());
 
         URL fetchPhotoURL = mFetchPhotoTask.getFetchPhotoURL();
-        User user = mFetchPhotoTask.getUser();
         if(fetchPhotoURL == null){
             throw new IllegalArgumentException("fetch photo url cannot be null");
         }
+
         Bitmap fetchPhotoBitmap = mHttpRequestHelper.fetchPhotoFromURL(fetchPhotoURL);
         if(fetchPhotoBitmap == null){
             Log.d(TAG,"got null bitmap");

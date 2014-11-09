@@ -1,6 +1,5 @@
 package com.example.better_together.ThreadPool.fetchPhoto.recentMedia;
 
-import android.graphics.Bitmap;
 import android.widget.ArrayAdapter;
 import com.example.better_together.ThreadPool.ThreadPoolManager;
 import com.example.better_together.Views.models.UserPhoto;
@@ -23,6 +22,7 @@ public class GetUserRecentMediaTask implements ITaskGetUserRecentMediaMethods {
     private String mUserPhotosCaption;
     private Date mUserPhotosCreationDate;
     private int mIndex;
+    private String mUserPhotoLikesNum;
 
     public GetUserRecentMediaTask(){
         this.mGetUserRecentMediaRunnable = new GetUserRecentMediaRunnable(this);
@@ -52,10 +52,11 @@ public class GetUserRecentMediaTask implements ITaskGetUserRecentMediaMethods {
     }
 
     @Override
-    public void setGetUserRecentMediaResponse(URL photoURL,String caption,Date creationDate) {
+    public void setGetUserRecentMediaResponse(URL photoURL, String caption, Date creationDate, String likesNum) {
         this.mUserPhotoURL = photoURL;
         this.mUserPhotosCaption = caption;
         this.mUserPhotosCreationDate = creationDate;
+        this.mUserPhotoLikesNum = likesNum;
         mUserManager.handleGetUserRecentMediaTaskResponse(this);
     }
 
@@ -67,9 +68,11 @@ public class GetUserRecentMediaTask implements ITaskGetUserRecentMediaMethods {
         return this.mUserPhotoURL;
     }
 
-    public String getUserPhotosCaption(){return this.mUserPhotosCaption;}
+    public String getUserPhotoCaption(){return this.mUserPhotosCaption;}
 
-    public Date getUserPhotosCreationDate(){return this.mUserPhotosCreationDate;}
+    public Date getUserPhotoCreationDate(){return this.mUserPhotosCreationDate;}
+
+    public String getUserPhotoLikesNum(){return  this.mUserPhotoLikesNum;}
 
     public UserPhoto getUserPhoto(){
         return this.mUserPhoto;

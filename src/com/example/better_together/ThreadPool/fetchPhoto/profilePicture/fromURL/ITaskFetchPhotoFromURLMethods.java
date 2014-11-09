@@ -2,6 +2,7 @@ package com.example.better_together.ThreadPool.fetchPhoto.profilePicture.fromURL
 
 import android.graphics.Bitmap;
 import com.example.better_together.Views.models.User;
+import com.example.better_together.storage.SharedPrefStorage;
 
 import java.net.URL;
 

@@ -18,7 +18,7 @@ public class ViewsHelper {
     private static final String TAG = ViewsHelper.class.getName();
 
     public static void populateListWithGroups(ListView list,String iGroupsAsString){
-        String groupsAsString = iGroupsAsString;
+        String groupsAsString = iGroupsAsString == null ? "" : iGroupsAsString;
         GroupsAdapter adapter = (GroupsAdapter)list.getAdapter();
         try{
             JSONArray groupsJSONArray = new JSONArray(groupsAsString);

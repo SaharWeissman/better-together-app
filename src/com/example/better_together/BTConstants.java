@@ -25,11 +25,12 @@ public class BTConstants {
     public static final String JSON_ATTR_CAPTION = "caption";
     public static final String JSON_ATTR_CAPTION_TEXT = "text";
     public static final String JSON_ATTR_CREATED_TIME = "created_time";
+    public static final String JSON_ATTR_LIKES = "likes";
+    public static final String JSON_ATTR_LIKES_COUNT = "count";
 
     public static final String USER_PHOTO_DATE_FORMAT = "MM/dd/yy HH:mm:ss";
 
     public static final String HTTP_STATUS_CODE = "status_code";
-
 
     public static final int SEARCH_USERS_RESULTS_COUNT = 10;
     public static final String INTENT_EXTRA_SEARCH_MORE_USERS = "search_more_users";

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
-        >
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:paddingBottom="5dp" android:paddingTop="5dp">
     <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -29,12 +29,28 @@
             android:text="caption"
             android:id="@+id/txtV_user_photo_caption"
             android:textSize="15dp"
-            android:layout_below="@+id/txtV_user_photo_create_time" android:layout_alignParentLeft="true"/>
+            android:layout_below="@+id/txtV_user_photo_create_time" android:layout_alignParentLeft="true"
+            android:layout_marginTop="14dp"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="createdTime"
             android:id="@+id/txtV_user_photo_create_time"
             android:layout_below="@+id/imgV_user_photo_profile_pic" android:layout_alignParentLeft="true"
-            android:textSize="7dp"/>
+            android:textSize="8dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/txtV_user_photo_likes_count"
+            android:textSize="9dp"
+            android:layout_below="@+id/txtV_user_photo_create_time" android:layout_alignParentLeft="true"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LIKES"
+            android:id="@+id/txtV_user_photo_likes"
+            android:textSize="8dp"
+            android:layout_alignBottom="@+id/txtV_user_photo_likes_count"
+            android:layout_alignRight="@+id/txtV_user_photo_create_time"/>
 </RelativeLayout>

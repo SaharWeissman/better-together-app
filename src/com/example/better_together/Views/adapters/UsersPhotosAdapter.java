@@ -52,10 +52,12 @@ public class UsersPhotosAdapter extends ArrayAdapter<UserPhoto> {
         TextView userName = (TextView)convertView.findViewById(R.id.txtV_user_photo_username);
         TextView photoCaption = (TextView)convertView.findViewById(R.id.txtV_user_photo_caption);
         TextView photoCreateDate = (TextView)convertView.findViewById(R.id.txtV_user_photo_create_time);
+        TextView photoLikesNum = (TextView)convertView.findViewById(R.id.txtV_user_photo_likes_count);
         ImageView userProfilePic = (ImageView)convertView.findViewById(R.id.imgV_user_photo_profile_pic);
         ImageView userImage = (ImageView)convertView.findViewById(R.id.imgV_user_photo);
         userName.setText(userPhoto.getUser().getUserName());
         photoCaption.setText(userPhoto.getCaption());
+        photoLikesNum.setText(userPhoto.getLikesNum());
         userProfilePic.setImageBitmap(user.getProfilePic());
         userImage.setImageBitmap(userPhoto.getPhoto());
 

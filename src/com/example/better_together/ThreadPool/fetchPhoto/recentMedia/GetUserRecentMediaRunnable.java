@@ -1,6 +1,5 @@
 package com.example.better_together.ThreadPool.fetchPhoto.recentMedia;
 
-import android.graphics.Bitmap;
 import android.os.Process;
 import android.util.Log;
 import com.example.better_together.BTConstants;
@@ -46,15 +45,28 @@ public class GetUserRecentMediaRunnable implements Runnable {
                 URL imageURL = extractPhotoURLFromImageJSON(imageJSON);
                 String caption = extractCaptionFromJSON(imageJSON);
                 Date creationDate = extractCreationDateFromJSON(imageJSON);
-                mUserRecentMediaTask.setGetUserRecentMediaResponse(imageURL, caption, creationDate);
+                String likes = extractLikesNumFromJSON(imageJSON);
+                mUserRecentMediaTask.setGetUserRecentMediaResponse(imageURL, caption, creationDate,likes);
             }else if(responseAsJson.getInt(BTConstants.HTTP_STATUS_CODE) == HttpStatus.SC_BAD_REQUEST){
                 Log.d(TAG,"got bad request code");
-                mUserRecentMediaTask.setGetUserRecentMediaResponse(null, "BAD REQUEST", null);
+                mUserRecentMediaTask.setGetUserRecentMediaResponse(null, "BAD REQUEST", null, null);
             }
         }catch (JSONException e) {
             Log.e(TAG, "cannot get image json");
-            mUserRecentMediaTask.setGetUserRecentMediaResponse(null, "JSONException", null);
+            mUserRecentMediaTask.setGetUserRecentMediaResponse(null, "JSONException", null, null);
         }
+    }
+
+    private String extractLikesNumFromJSON(JSONObject imageJSON) {
+        String likesNum;
+        try{
+            JSONObject likesFromJSON = imageJSON.getJSONObject(BTConstants.JSON_ATTR_LIKES);
+            likesNum = likesFromJSON.getString(BTConstants.JSON_ATTR_LIKES_COUNT);
+        }catch(JSONException e){
+            Log.e(TAG,"unable to get likes number from json",e);
+            likesNum = null;
+        }
+        return likesNum;
     }
 
     private Date extractCreationDateFromJSON(JSONObject imageJSON) {
