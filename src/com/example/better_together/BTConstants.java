@@ -29,6 +29,7 @@ public class BTConstants {
     public static final String JSON_ATTR_LIKES_COUNT = "count";
 
     public static final String USER_PHOTO_DATE_FORMAT = "MM/dd/yy HH:mm:ss";
+    public static final String KEY_FETCHED_PIC_URLS = "fetched_pics_urls";
 
     public static final String HTTP_STATUS_CODE = "status_code";
 
@@ -36,6 +37,7 @@ public class BTConstants {
     public static final String INTENT_EXTRA_SEARCH_MORE_USERS = "search_more_users";
     public static final String SHARED_PREF_KEY_PROFILE_PICS_MAPPING = "profile_pictures_mapping";
     public static final String PROFILE_PICTURES_DIRECTORY = "profilePictures";
+    public static final String FETCHED_USER_PICTURE_DIRECTORY = "fetchedPictures";
 
     public static final int MESSAGE_SEARCH_USER_NO_RESULTS_FOUND = 0;
     public static final int MESSAGE_FOUND_RESULTS = 1;

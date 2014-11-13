@@ -158,58 +158,76 @@ public class AddUsersToGroupActivity extends Activity implements IViewItemClickL
      */
     @Override
     public boolean onListItemLongClick(ViewItem item) {
-        try {
-            User user = (User)item;
-            String groupsAsString = mSharedPrefHelper.readString(BTConstants.SHARED_PREF_KEY_GROUPS);
-            JSONArray groupsArray = new JSONArray(groupsAsString);
+            final User user = (User)item;
+            final String groupName = user.getGroupName();
 
-            // find specific group
-            for(int i =0; i < groupsArray.length(); i++){
-                JSONObject groupJSON = groupsArray.getJSONObject(i);
-                Iterator<String> keys = groupJSON.keys();
-                while (keys.hasNext()){
-                    String groupKey = keys.next();
-                    if(groupKey.equals(mGroupName)){
-                        Log.d(TAG,"found group: " + mGroupName);
-                        JSONArray usersInGroup = groupJSON.getJSONArray(mGroupName);
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+            alertDialogBuilder.setTitle("Confirm");
+            alertDialogBuilder.setMessage(String.format("Add user: \"%s\" to group: \"%s\"?", user.getUserName(), groupName));
+            alertDialogBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    String groupsAsString = mSharedPrefHelper.readString(BTConstants.SHARED_PREF_KEY_GROUPS);
+                    try {
+                        JSONArray groupsArray = new JSONArray(groupsAsString);
 
-                        // check if user does not already exist in group already
-                        if(!userAlreadyExistInGroup(usersInGroup,user)) {
-                            JSONObject userJSON = new JSONObject();
-                            userJSON.put(BTConstants.JSON_ATTR_USERNAME, user.getUserName());
-                            userJSON.put(BTConstants.JSON_ATTR_USER_FULL_NAME, user.getFullName());
-                            userJSON.put(BTConstants.JSON_ATTR_USER_BIO, user.getUserBio());
-                            userJSON.put(BTConstants.JSON_ATTR_USER_WEBSITE, user.getUserWebsite());
-                            userJSON.put(BTConstants.JSON_ATTR_USER_ID, user.getID());
-                            userJSON.put(BTConstants.JSON_ATTR_USER_PROFILE_PIC_URL, saveAndGetUUIDForProfilePic(user));
-                            usersInGroup.put(userJSON);
-                            mSharedPrefHelper.writeString(BTConstants.SHARED_PREF_KEY_GROUPS,groupsArray.toString());
-                            Toast.makeText(this, "User added successfully to group", Toast.LENGTH_SHORT).show();
+                        // find specific group
+                        for (int i = 0; i < groupsArray.length(); i++) {
+                            JSONObject groupJSON = groupsArray.getJSONObject(i);
+                            Iterator<String> keys = groupJSON.keys();
+                            while (keys.hasNext()) {
+                                String groupKey = keys.next();
+                                if (groupKey.equals(mGroupName)) {
+                                    Log.d(TAG, "found group: " + mGroupName);
+                                    JSONArray usersInGroup = groupJSON.getJSONArray(mGroupName);
 
-                            // switch layout back to search user
-                            this.setContentView(R.layout.add_users_to_group);
-                            initUIComponents();
-                        }else{
-                            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-                            alertDialogBuilder.setTitle("Alert");
-                            alertDialogBuilder.setMessage("User already exist in group!");
-                            alertDialogBuilder.setNegativeButton("OK",new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    mAlertDialog.dismiss();
+                                    // check if user does not already exist in group already
+                                    if (!userAlreadyExistInGroup(usersInGroup, user)) {
+                                        JSONObject userJSON = new JSONObject();
+                                        userJSON.put(BTConstants.JSON_ATTR_USERNAME, user.getUserName());
+                                        userJSON.put(BTConstants.JSON_ATTR_USER_FULL_NAME, user.getFullName());
+                                        userJSON.put(BTConstants.JSON_ATTR_USER_BIO, user.getUserBio());
+                                        userJSON.put(BTConstants.JSON_ATTR_USER_WEBSITE, user.getUserWebsite());
+                                        userJSON.put(BTConstants.JSON_ATTR_USER_ID, user.getID());
+                                        userJSON.put(BTConstants.JSON_ATTR_USER_PROFILE_PIC_URL, saveAndGetUUIDForProfilePic(user));
+                                        usersInGroup.put(userJSON);
+                                        mSharedPrefHelper.writeString(BTConstants.SHARED_PREF_KEY_GROUPS, groupsArray.toString());
+                                        Toast.makeText(mActivity, "User added successfully to group", Toast.LENGTH_SHORT).show();
+
+                                        // switch layout back to search user
+                                        mActivity.setContentView(R.layout.add_users_to_group);
+                                        initUIComponents();
+                                    } else {
+                                        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(mActivity);
+                                        alertDialogBuilder.setTitle("Alert");
+                                        alertDialogBuilder.setMessage("User already exist in group!");
+                                        alertDialogBuilder.setNegativeButton("OK", new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                mAlertDialog.dismiss();
+                                            }
+                                        });
+                                        mAlertDialog = alertDialogBuilder.create();
+                                        mAlertDialog.show();
+                                    }
+                                } else {
+                                    break;
                                 }
-                            });
-                            mAlertDialog = alertDialogBuilder.create();
-                            mAlertDialog.show();
+                            }
                         }
-                    }else{
-                        break;
+                    } catch (JSONException e) {
+
                     }
                 }
-            }
-        }catch (JSONException e){
-            Log.e(TAG,"caught jsonException while entering user to group",e);
-        }
+            });
+            alertDialogBuilder.setNegativeButton("No",new DialogInterface.OnClickListener() {
+                @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        mAlertDialog.dismiss();
+                    }
+            });
+        mAlertDialog = alertDialogBuilder.create();
+        mAlertDialog.show();
         return true;
     }
 

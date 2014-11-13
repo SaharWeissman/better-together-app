@@ -14,5 +14,6 @@ public interface ITaskFetchPhotoFromURLMethods {
     void setFetchPhotoFromURLResult(Bitmap result);
     URL getFetchPhotoURL();
     Bitmap getFetchPhotoResponse();
+    FetchPhotoFromURLTask.PhotoType getPhotoType();
     User getUser();
 }

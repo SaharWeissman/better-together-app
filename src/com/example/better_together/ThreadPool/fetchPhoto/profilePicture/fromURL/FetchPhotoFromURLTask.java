@@ -83,6 +83,7 @@ public class FetchPhotoFromURLTask implements ITaskFetchPhotoFromURLMethods {
         return this.mUsersAdapter;
     }
 
+    @Override
     public PhotoType getPhotoType(){
         return mPhotoType;
     }

@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +26,8 @@ import com.example.better_together.storage.SharedPrefStorage;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.json.JSONStringer;
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -38,6 +41,7 @@ public class ShowExistingGroupsActivity extends Activity implements IViewItemCli
     private SharedPrefStorage mSharedPrefHelper;
     private int mCurrentContentView;
     private AlertDialog mAlertDialog;
+    private UsersAdapter mUsersInGroupAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,36 +88,120 @@ public class ShowExistingGroupsActivity extends Activity implements IViewItemCli
 
     @Override
     public boolean onListItemLongClick(final ViewItem item) {
-        final Group group = (Group)item;
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setTitle("Group Options");
-        alertDialogBuilder.setMessage("choose option:");
-        alertDialogBuilder.setPositiveButton("Edit name", new DialogInterface.OnClickListener(){
+        if(item instanceof Group) {
+            final Group group = (Group) item;
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+            alertDialogBuilder.setTitle("Group Options");
+            alertDialogBuilder.setMessage("choose option:");
+            alertDialogBuilder.setPositiveButton("Edit name", new DialogInterface.OnClickListener() {
 
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                showEditGroupNameLayout(group);
-            }
-        });
-
-        alertDialogBuilder.setNeutralButton("Delete Group", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                deleteGroup(group);
-            }
-        });
-
-        alertDialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                if(mAlertDialog != null && mAlertDialog.isShowing()) {
-                    mAlertDialog.dismiss();
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    showEditGroupNameLayout(group);
                 }
-            }
-        });
-        mAlertDialog = alertDialogBuilder.create();
-        mAlertDialog.show();
+            });
+
+            alertDialogBuilder.setNeutralButton("Delete Group", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    deleteGroup(group);
+                }
+            });
+
+            alertDialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    if (mAlertDialog != null && mAlertDialog.isShowing()) {
+                        mAlertDialog.dismiss();
+                    }
+                }
+            });
+            mAlertDialog = alertDialogBuilder.create();
+            mAlertDialog.show();
+        }
+        else if(item instanceof User){
+            final User user = (User)item;
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+            alertDialogBuilder.setTitle("Confirm");
+            alertDialogBuilder.setMessage(String.format("Remove user \"%s\" from group?",user.getUserName()));
+            alertDialogBuilder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    removeUserFromGroup(user,user.getGroupName());
+                }
+            });
+
+            alertDialogBuilder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    if(mAlertDialog != null && mAlertDialog.isShowing()) {
+                        mAlertDialog.dismiss();
+                    }
+                }
+            });
+            mAlertDialog= alertDialogBuilder.create();
+            mAlertDialog.show();
+        }
         return true;
+    }
+
+    private void removeUserFromGroup(User user, String iGroupName) {
+        String groupsAsString = mSharedPrefHelper.readString(BTConstants.SHARED_PREF_KEY_GROUPS);
+        if(!TextUtils.isEmpty(groupsAsString)){
+            try{
+                JSONArray groupsJSONArray = new JSONArray(groupsAsString);
+                String userNameToRemove = user.getUserName();
+                int indexGroupToRemove = -1;
+                ArrayList<String> groupsArrayAsList = new ArrayList<String>(groupsJSONArray.length());
+
+                //step#1 - transfer groups jsons to list + find index of group in list
+                for(int i =0; i < groupsJSONArray.length();i++){
+                    JSONObject groupJSON = groupsJSONArray.getJSONObject(i);
+                    Iterator<String> iter = groupJSON.keys();
+                    while(iter.hasNext()){
+                        String groupName = iter.next();
+                        if(groupName.equals(iGroupName)){
+                            indexGroupToRemove = i;
+                            break;
+                        }
+                    }
+                    groupsArrayAsList.add(groupJSON.toString());
+                }
+
+                //step#2 -  save group aside & delete from list
+                JSONObject groupToRemove = new JSONObject(groupsArrayAsList.get(indexGroupToRemove));
+                JSONArray usersInGroupJSONArray = groupToRemove.getJSONArray(iGroupName);
+                groupsArrayAsList.remove(indexGroupToRemove);
+
+                //step#3 - transfer users into list + find index of user to remove
+                int indexUserToRemove = -1;
+                boolean foundUser = false;
+                ArrayList<String> usersInGroupList = new ArrayList<String>(usersInGroupJSONArray.length());
+                for(int i = 0; i < usersInGroupJSONArray.length(); i++){
+                    JSONObject userJSON = usersInGroupJSONArray.getJSONObject(i);
+                    usersInGroupList.add(userJSON.toString());
+                    if(!foundUser && userJSON.getString(BTConstants.JSON_ATTR_USERNAME).equals(user.getUserName())){
+                        indexUserToRemove = i;
+                        foundUser = true;
+                    }
+                }
+
+                //step#4 - remove user from list of users in group + set new group + new group array & save to shared pref
+                usersInGroupList.remove(indexUserToRemove);
+                JSONObject newGroup = new JSONObject();
+                newGroup.put(iGroupName,new JSONArray(usersInGroupList.toString()));
+                groupsArrayAsList.add(newGroup.toString());
+
+                JSONArray newGroupArray = new JSONArray(groupsArrayAsList.toString());
+                mSharedPrefHelper.writeString(BTConstants.SHARED_PREF_KEY_GROUPS,newGroupArray.toString());
+
+                mUsersInGroupAdapter.remove(user);
+                mUsersInGroupAdapter.notifyDataSetChanged();
+
+            }catch(JSONException e){
+                Log.e(TAG,"unable to convert groups json string to json array",e);
+            }
+        }
     }
 
     private void deleteGroup(Group group) {
@@ -211,8 +299,8 @@ public class ShowExistingGroupsActivity extends Activity implements IViewItemCli
             groupName.setText(group.getGroupName());
             ListView userInGroup = (ListView) findViewById(R.id.listV_users_in_group);
             ArrayList<User> usersInGroupArrayList = new ArrayList<User>();
-            UsersAdapter adapter = new UsersAdapter(this, usersInGroupArrayList,this);
-            userInGroup.setAdapter(adapter);
+            mUsersInGroupAdapter= new UsersAdapter(this, usersInGroupArrayList,this);
+            userInGroup.setAdapter(mUsersInGroupAdapter);
 
             JSONArray usersInGroupJSONArray = group.getUsersInGroup();
             for(int i = 0; i < usersInGroupJSONArray.length(); i++){
@@ -221,9 +309,9 @@ public class ShowExistingGroupsActivity extends Activity implements IViewItemCli
                     User user = new User(userJSON.getString(BTConstants.JSON_ATTR_USERNAME),userJSON.getString(BTConstants.JSON_ATTR_USER_FULL_NAME),userJSON.getString(BTConstants.JSON_ATTR_USER_BIO),
                             userJSON.getString(BTConstants.JSON_ATTR_USER_WEBSITE),userJSON.getString(BTConstants.JSON_ATTR_USER_PROFILE_PIC_URL),userJSON.getString(BTConstants.JSON_ATTR_USER_ID)
                             ,group.getGroupName(),null);
-                    adapter.add(user);
+                    mUsersInGroupAdapter.add(user);
                     ThreadPoolManager.fetchUserProfilePicFromMemory(BTConstants.sAppProfilePicDirectoryPrefixPath +
-                    user.getProfilePicURL() + ".png",user,adapter);
+                    user.getProfilePicURL() + ".png",user,mUsersInGroupAdapter);
                 }catch(JSONException e){
                     Log.e(TAG,"unable to read user json",e);
                     continue;

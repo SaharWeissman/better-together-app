@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.content.SharedPreferences;
 import android.util.Log;
 import com.example.better_together.BTConstants;
+import com.example.better_together.Utils.SharedPrefHelper;
+
+import java.util.Set;
 
 /**
  * Created by ssdd on 10/19/14.
@@ -46,8 +49,34 @@ public class SharedPrefStorage implements IKeyValueStorage{
     }
 
     @Override
+    public boolean writeStringSet(String key, Set<String> values) {
+        Log.d(TAG,String.format("writing string set: key= %s, value= %s",key,values));
+        boolean ret = false;
+        if(key == null || values == null || values.isEmpty()){
+            Log.w(TAG,"key or values are null");
+        }else{
+            try{
+                SharedPreferences.Editor editor = mSharedPref.edit();
+                editor.putStringSet(key,values);
+                editor.commit();
+                ret = true;
+            }catch(Exception e){
+                Log.e(TAG,"error writing to sharedPref",e);
+                ret = false;
+            }
+        }
+        return ret;
+    }
+
+    @Override
     public String readString(String key) {
         Log.d(TAG,String.format("readString: %s",key));
         return mSharedPref.getString(key,null);
+    }
+
+    @Override
+    public Set<String> readStringSet(String key) {
+        Log.d(TAG,"read string set: " + key);
+        return mSharedPref.getStringSet(key,null);
     }
 }

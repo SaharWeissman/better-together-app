@@ -56,25 +56,25 @@ public class UsersAdapter extends ArrayAdapter<User>{
         convertView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                final String groupName = user.getGroupName();
-                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
-                alertDialogBuilder.setTitle(ALERT_DIALOG_TITLE);
-                alertDialogBuilder.setMessage(String.format("Add user: \"%s\" to group: \"%s\"?", user.getUserName(), groupName));
-                alertDialogBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
+//                final String groupName = user.getGroupName();
+//                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
+//                alertDialogBuilder.setTitle(ALERT_DIALOG_TITLE);
+//                alertDialogBuilder.setMessage(String.format("Add user: \"%s\" to group: \"%s\"?", user.getUserName(), groupName));
+//                alertDialogBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
 //                        addUserToGroup(user, groupName);
                         mUserItemClickListener.onListItemLongClick(user);
-                    }
-                });
-                alertDialogBuilder.setNegativeButton("No",new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        mAlertDialog.dismiss();
-                    }
-                });
-                mAlertDialog = alertDialogBuilder.create();
-                mAlertDialog.show();
+//                    }
+//                });
+//                alertDialogBuilder.setNegativeButton("No",new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        mAlertDialog.dismiss();
+//                    }
+//                });
+//                mAlertDialog = alertDialogBuilder.create();
+//                mAlertDialog.show();
                 return true;
             }
         });

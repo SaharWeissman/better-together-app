@@ -44,29 +44,67 @@
       <config />
     </shared>
   </component>
-  <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="                               " />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="9c4afe44-82c2-48ca-bf9d-336e715d6d1a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/better_together/Views/AutoGridView.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/Views/adapters/UsersAdapter$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/Views/adapters/UsersAdapter$1$2.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/AddUsersToGroupActivity$5.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/AddUsersToGroupActivity$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/AddUsersToGroupActivity.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/AddUsersToGroupActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/BTConstants.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/BTConstants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/example/better_together/BuildConfig.class" afterPath="$PROJECT_DIR$/bin/classes/com/example/better_together/BuildConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/CreateGroupsActivity.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/CreateGroupsActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/FetchPhotoFromURLRunnable.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/FetchPhotoFromURLRunnable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/FetchPhotoFromURLTask.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/FetchPhotoFromURLTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/FetchPhotosActivity.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/FetchPhotosActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/Views/adapters/GroupsAdapter.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/Views/adapters/GroupsAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/storage/IKeyValueStorage.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/storage/IKeyValueStorage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/ITaskFetchPhotoFromURLMethods.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/ITaskFetchPhotoFromURLMethods.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/MainActivity$1.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/MainActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/MainActivity$2.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/MainActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/MainActivity$3.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/MainActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/MainActivity$4.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/MainActivity$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/MainActivity$5.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/MainActivity$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/MainActivity.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/MainActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/R$id.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/R$layout.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/R$string.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/R.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/storage/SharedPrefStorage.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/storage/SharedPrefStorage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity$1.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity$2.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity$3.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity$4.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity$5.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity$6.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/Views/adapters/UsersAdapter$1.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/Views/adapters/UsersAdapter$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/Views/adapters/UsersAdapter.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/Views/adapters/UsersAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/Views/adapters/UsersPhotosAdapter.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/Views/adapters/UsersPhotosAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/Utils/ViewsHelper.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/Utils/ViewsHelper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/better_together.apk" afterPath="$PROJECT_DIR$/out/production/better_together/better_together.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/AddUsersToGroupActivity.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/AddUsersToGroupActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/BTConstants.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/BTConstants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/example/better_together/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/com/example/better_together/BuildConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/FetchPhotoFromURLRunnable.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/FetchPhotoFromURLRunnable.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/FetchPhotoFromURLTask.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/FetchPhotoFromURLTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/FetchPhotosActivity.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/FetchPhotosActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/recentMedia/GetUserRecentMediaRunnable.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/recentMedia/GetUserRecentMediaRunnable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/recentMedia/GetUserRecentMediaTask.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/recentMedia/GetUserRecentMediaTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/Utils/FileHelper.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/Utils/FileHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/storage/IKeyValueStorage.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/storage/IKeyValueStorage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/ITaskFetchPhotoFromURLMethods.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/ITaskFetchPhotoFromURLMethods.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/recentMedia/ITaskGetUserRecentMediaMethods.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/recentMedia/ITaskGetUserRecentMediaMethods.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/ThreadPoolManager.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/ThreadPoolManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/Views/models/UserPhoto.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/Views/models/UserPhoto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/Views/adapters/UsersPhotosAdapter.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/Views/adapters/UsersPhotosAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/MainActivity.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/Utils/SharedPrefHelper.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/Utils/SharedPrefHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/storage/SharedPrefStorage.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/storage/SharedPrefStorage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/ShowExistingGroupsActivity.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/ShowExistingGroupsActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/Views/adapters/UsersAdapter.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/Views/adapters/UsersAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/better_together.iml" afterPath="$PROJECT_DIR$/better_together.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/item_user_photo.xml" afterPath="$PROJECT_DIR$/res/layout/item_user_photo.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/users_photos.xml" afterPath="$PROJECT_DIR$/res/layout/users_photos.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.properties" afterPath="$PROJECT_DIR$/project.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="better together.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,49 +129,127 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FetchPhotosActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/better_together/FetchPhotosActivity.java">
+      <file leaf-file-name="ShowExistingGroupsActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/better_together/ShowExistingGroupsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1422" max-vertical-offset="1926">
-              <caret line="79" column="48" selection-start-line="79" selection-start-column="48" selection-end-line="79" selection-end-column="48" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2392" max-vertical-offset="4986">
+              <caret line="186" column="17" selection-start-line="186" selection-start-column="17" selection-end-line="186" selection-end-column="17" />
+              <folding>
+                <element signature="e#5147#5384#0" expanded="true" />
+                <element signature="e#5383#5384#0" expanded="true" />
+                <element signature="e#5443#5758#0" expanded="true" />
+                <element signature="e#5757#5758#0" expanded="true" />
+                <element signature="e#6368#6376#0" expanded="true" />
+                <element signature="e#7627#7635#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="item_user_photo.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/item_user_photo.xml">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/better_together/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="1098">
-              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2970">
+              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+              <folding>
+                <element signature="e#6758#7083#0" expanded="true" />
+                <element signature="e#7082#7083#0" expanded="true" />
+                <element signature="e#7179#7331#0" expanded="true" />
+                <element signature="e#7330#7331#0" expanded="true" />
+              </folding>
             </state>
           </provider>
-          <provider editor-type-id="android-designer">
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.32247558" vertical-offset="0" max-vertical-offset="614">
+              <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+              <folding>
+                <element signature="e#541#559#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ic_launcher.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/ic_launcher.png">
+          <provider selected="true" editor-type-id="images">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AutoGridView.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/better_together/Views/AutoGridView.java">
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/better_together/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1638" max-vertical-offset="1782">
-              <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="414">
+              <caret line="9" column="57" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UsersAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/better_together/Views/adapters/UsersAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.6" vertical-offset="756" max-vertical-offset="1332">
+              <caret line="73" column="23" selection-start-line="70" selection-start-column="22" selection-end-line="73" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users_photos.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/res/layout/users_photos.xml">
+      <file leaf-file-name="IViewItemClickListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/better_together/Views/IViewItemClickListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.59504133" vertical-offset="0" max-vertical-offset="486">
-              <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="android-designer">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="AddUsersToGroupActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/better_together/AddUsersToGroupActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2846" max-vertical-offset="5004">
+              <caret line="229" column="28" selection-start-line="229" selection-start-column="28" selection-end-line="229" selection-end-column="28" />
+              <folding>
+                <element signature="e#6235#9953#0" expanded="true" />
+                <element signature="e#9137#9491#0" expanded="true" />
+                <element signature="e#9490#9491#0" expanded="true" />
+                <element signature="e#9952#9953#0" expanded="true" />
+                <element signature="e#10010#10236#0" expanded="true" />
+                <element signature="e#10235#10236#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewsHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/better_together/Utils/ViewsHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="774">
+              <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/better_together/Utils/FileHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="312" max-vertical-offset="1242">
+              <caret line="59" column="39" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
@@ -148,61 +264,27 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="changedFiles">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/res/layout/users_in_group.xml" />
-        <option value="$PROJECT_DIR$/res/layout/create_groups.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhotos/fromURL/FetchPhotoRunnable.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhotos/fromURL/FetchPhotoFromURLRunnable.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/FetchPhotoFromURLRunnable.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/fromURL/FetchPhotoFromURLRunnable.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/fromURL/ITaskFetchPhotoFromURLMethods.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/fromMemory/ITaskFetchPhotoFromMemoryMethods.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/fromMemory/FetchPhotoFromMemoryRunnable.java" />
-        <option value="$PROJECT_DIR$/res/layout/show_existing_groups.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/listViews/adapters/GroupsAdapter.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/listViews/IListViewItemClickListener.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/listViews/adapters/UsersAdapter.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/Utils/FetchPhotosActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/Utils/DisplayHelper.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/res/layout/fetch_photos_groups.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/searchUsers/SearchUserRunnable.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/searchUsers/ITaskSearchUserMethods.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/recentMedia/ITaskGetUserRecentMediaMethods.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/recentMedia/GetUserRecentMediaRunnable.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/searchUsers/SearchUserTask.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/fromURL/FetchPhotoFromURLTask.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/Views/models/ViewItem.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/Views/IListViewItemClickListener.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/Views/IViewItemClickListener.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/recentMedia/GetUserRecentMediaTask.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/fromMemory/FetchPhotoFromMemoryTask.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/Views/models/User.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/Views/adapters/UsersAdapter.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/Views/models/UserPhotos.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/recentMedia/ITaskGetUserRecentMediaMethods.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/network/HttpRequestHelper.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/AddUsersToGroupActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/MainActivity.java" />
-        <option value="$PROJECT_DIR$/res/layout/change_group_name_layout.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/Utils/ViewsHelper.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/ShowExistingGroupsActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/FetchPhotoFromURLRunnable.java" />
+        <option value="$PROJECT_DIR$/src/com/example/better_together/Utils/SharedPrefHelper.java" />
+        <option value="$PROJECT_DIR$/src/com/example/better_together/storage/IKeyValueStorage.java" />
+        <option value="$PROJECT_DIR$/src/com/example/better_together/storage/SharedPrefStorage.java" />
+        <option value="$PROJECT_DIR$/src/com/example/better_together/BTConstants.java" />
         <option value="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/ITaskFetchPhotoFromURLMethods.java" />
         <option value="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/FetchPhotoFromURLTask.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/BTConstants.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/recentMedia/GetUserRecentMediaRunnable.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/recentMedia/GetUserRecentMediaTask.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/Views/models/UserPhoto.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/Views/adapters/UsersPhotosAdapter.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/ThreadPoolManager.java" />
-        <option value="$PROJECT_DIR$/res/layout/item_user_photo.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/Views/AutoGridView.java" />
-        <option value="$PROJECT_DIR$/src/com/example/better_together/FetchPhotosActivity.java" />
-        <option value="$PROJECT_DIR$/res/layout/users_photos.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/better_together/Utils/FileHelper.java" />
+        <option value="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/FetchPhotoFromURLRunnable.java" />
+        <option value="$PROJECT_DIR$/src/com/example/better_together/Views/adapters/UsersAdapter.java" />
+        <option value="$PROJECT_DIR$/src/com/example/better_together/AddUsersToGroupActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/example/better_together/ShowExistingGroupsActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/example/better_together/MainActivity.java" />
+        <option value="$PROJECT_DIR$/src/App.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
@@ -258,6 +340,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -294,64 +378,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="better together" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="better_together" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="better_together" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="better together" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="better_together" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="better together" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="better_together" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -361,17 +389,17 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.lastSelected" value="preferences.pluginManager" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Android Logcat" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../AndEngine/mine/MyFirstAndEngineGame" />
     <property name="FullScreen" value="false" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="DEBUGGABLE_DEVICE" value="myEmulator [emulator-5554]" />
+    <property name="DEBUGGABLE_DEVICE" value="myEmulator1 [emulator-5554]" />
     <property name="DEBUGGABLE_PROCESS" value="com.example.better_together" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -379,7 +407,6 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="myEmulator1" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -422,7 +449,29 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -463,6 +512,7 @@
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -477,6 +527,7 @@
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -523,7 +574,7 @@
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="true" />
       <option name="PREFERRED_AVD" value="" />
       <option name="USE_COMMAND_LINE" value="false" />
       <option name="COMMAND_LINE" value="" />
@@ -559,46 +610,67 @@
     <task active="true" id="Default" summary="Default task">
       <changelist id="9c4afe44-82c2-48ca-bf9d-336e715d6d1a" name="Default" comment="" />
       <created>1412946861448</created>
+      <option name="number" value="Default" />
       <updated>1412946861448</updated>
     </task>
     <task id="LOCAL-00001" summary="created project">
       <created>1412946948872</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
       <updated>1412946948872</updated>
     </task>
     <task id="LOCAL-00002" summary="created project">
       <created>1412946966592</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
       <updated>1412946966592</updated>
     </task>
     <task id="LOCAL-00003" summary="mid-commit">
       <created>1413650248122</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
       <updated>1413650248122</updated>
     </task>
     <task id="LOCAL-00004" summary="continued implementing create new group - still in progress">
       <created>1413732267504</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
       <updated>1413732267504</updated>
     </task>
     <task id="LOCAL-00005" summary="more progress">
       <created>1414613539343</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
       <updated>1414613539343</updated>
     </task>
     <task id="LOCAL-00006" summary="added profile pics to grid view of fetch photos + changed num of pictures per user to 5">
       <created>1414614959224</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
       <updated>1414614959224</updated>
     </task>
     <task id="LOCAL-00007" summary="works but still need to fix performance issue in fetch photos (load each photo individually)">
       <created>1414682697502</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
       <updated>1414682697502</updated>
     </task>
     <task id="LOCAL-00008" summary="works but still need to fix performance issue in fetch photos (load each photo individually)">
       <created>1414764347584</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
       <updated>1414764347584</updated>
     </task>
     <task id="LOCAL-00009" summary="better performance: split get user recent media into 2 tasks: get caption&amp;date and get bitmap">
       <created>1414765430387</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
       <updated>1414765430387</updated>
     </task>
     <task id="LOCAL-00010" summary="added edit group name + delete group option">
       <created>1414881877717</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
       <updated>1414881877717</updated>
     </task>
     <option name="localTasksCounter" value="11" />
@@ -629,31 +701,33 @@
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.4997236" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32916668" sideWeight="0.4997236" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16030957" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2498618" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40833333" sideWeight="0.4997236" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15478165" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40833333" sideWeight="0.5002764" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959569" sideWeight="0.5007587" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15478165" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31770834" sideWeight="0.4997236" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40833333" sideWeight="0.4997236" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40833333" sideWeight="0.4997236" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959569" sideWeight="0.49924126" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946378" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15533444" sideWeight="0.49924126" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15478165" sideWeight="0.49823943" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.4997236" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32832617" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40833333" sideWeight="0.5002764" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2498618" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16030957" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -715,107 +789,39 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/recentMedia/GetUserRecentMediaRunnable.java</url>
-          <line>41</line>
-          <properties />
-          <option name="timeStamp" value="145" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/example/better_together/ShowExistingGroupsActivity.java</url>
-          <line>134</line>
+          <line>222</line>
           <properties />
           <option name="timeStamp" value="154" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/example/better_together/ShowExistingGroupsActivity.java</url>
-          <line>147</line>
+          <line>235</line>
           <properties />
           <option name="timeStamp" value="155" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/example/better_together/ShowExistingGroupsActivity.java</url>
-          <line>176</line>
+          <line>264</line>
           <properties />
           <option name="timeStamp" value="156" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/example/better_together/ShowExistingGroupsActivity.java</url>
-          <line>195</line>
+          <line>283</line>
           <properties />
           <option name="timeStamp" value="157" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/example/better_together/FetchPhotosActivity.java</url>
-          <line>79</line>
-          <properties />
-          <option name="timeStamp" value="158" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="159" />
+      <option name="time" value="175" />
     </breakpoint-manager>
+    <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout/show_existing_groups.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.68" vertical-offset="0" max-vertical-offset="468">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/Views/models/Group.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
-          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/instagram_credentials">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="198">
-          <caret line="4" column="66" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/ThreadPool/searchUsers/ITaskSearchUserMethods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
-          <caret line="10" column="65" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/Views/IViewItemClickListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/Views/adapters/GroupsAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="846">
-          <caret line="58" column="1" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../android-sdk-linux/sources/android-14/android/widget/Adapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="92" max-vertical-offset="2538">
@@ -848,13 +854,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="4488" max-vertical-offset="8712">
           <caret line="285" column="16" selection-start-line="285" selection-start-column="16" selection-end-line="285" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/Views/adapters/UsersAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="628" max-vertical-offset="1224">
-          <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -897,14 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../../android-sdk-linux/platforms/android-14/android.jar!/org/apache/http/HttpStatus.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="369" max-vertical-offset="1080">
@@ -919,31 +910,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1274" max-vertical-offset="2628">
-          <caret line="120" column="9" selection-start-line="120" selection-start-column="9" selection-end-line="120" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../android-sdk-linux/sources/android-14/org/json/JSONArray.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9918">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/storage/SharedPrefStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1008">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/CreateGroupsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="304" max-vertical-offset="2232">
-          <caret line="56" column="41" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -965,28 +935,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/Utils/ViewsHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="178" max-vertical-offset="774">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/ShowExistingGroupsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2528" max-vertical-offset="3456">
-          <caret line="202" column="5" selection-start-line="202" selection-start-column="5" selection-end-line="202" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/AddUsersToGroupActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3897" max-vertical-offset="4626">
-          <caret line="281" column="97" selection-start-line="281" selection-start-column="97" selection-end-line="281" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromMemory/ITaskFetchPhotoFromMemoryMethods.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
@@ -1001,20 +949,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromMemory/FetchPhotoFromMemoryRunnable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5" max-vertical-offset="594">
-          <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/ITaskFetchPhotoFromURLMethods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/better_together/network/HttpRequestHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="2196">
@@ -1022,39 +956,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/FetchPhotoFromURLRunnable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="792">
-          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/BTConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="1062">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/recentMedia/GetUserRecentMediaRunnable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="1944">
-          <caret line="48" column="41" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/recentMedia/ITaskGetUserRecentMediaMethods.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
           <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/recentMedia/GetUserRecentMediaTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="653" max-vertical-offset="1278">
-          <caret line="59" column="50" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -1072,25 +977,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/ThreadPool/ThreadPoolManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2430" max-vertical-offset="7110">
-          <caret line="135" column="46" selection-start-line="135" selection-start-column="46" selection-end-line="135" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/FetchPhotoFromURLTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="761" max-vertical-offset="1350">
-          <caret line="76" column="25" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/fetch_photos_groups.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.203704" vertical-offset="43" max-vertical-offset="450">
           <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -1101,15 +991,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="772" max-vertical-offset="1782">
           <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/FetchPhotosActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="614" max-vertical-offset="1404">
-          <caret line="79" column="48" selection-start-line="79" selection-start-column="48" selection-end-line="79" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1117,7 +998,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="1098">
           <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -1128,7 +1008,6 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="navigationeditor">
@@ -1139,7 +1018,6 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="navigationeditor">
@@ -1148,13 +1026,247 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/users_photos.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59504133" vertical-offset="0" max-vertical-offset="486">
-          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="486">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/recentMedia/GetUserRecentMediaTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="740" max-vertical-offset="1278">
+          <caret line="80" column="20" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/storage/SharedPrefStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="812" max-vertical-offset="1476">
+          <caret line="79" column="50" selection-start-line="79" selection-start-column="50" selection-end-line="79" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/storage/IKeyValueStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
+          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromMemory/FetchPhotoFromMemoryRunnable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5" max-vertical-offset="594">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="24" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/FetchPhotosActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="866" max-vertical-offset="1404">
+          <caret line="94" column="48" selection-start-line="94" selection-start-column="48" selection-end-line="94" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../android-sdk-linux/sources/android-14/android/content/ContextWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2053" max-vertical-offset="6696">
+          <caret line="208" column="16" selection-start-line="208" selection-start-column="16" selection-end-line="208" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/Utils/SharedPrefHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="576">
+          <caret line="24" column="5" selection-start-line="11" selection-start-column="4" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#452#453#0" expanded="false" />
+            <element signature="e#494#495#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/CreateGroupsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="666" max-vertical-offset="2268">
+          <caret line="56" column="41" selection-start-line="54" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/recentMedia/GetUserRecentMediaRunnable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="361" max-vertical-offset="1944">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/ThreadPool/ThreadPoolManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2795" max-vertical-offset="6570">
+          <caret line="200" column="27" selection-start-line="200" selection-start-column="27" selection-end-line="200" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/ITaskFetchPhotoFromURLMethods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
+          <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/FetchPhotoFromURLTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1368">
+          <caret line="85" column="13" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1393#1394#0" expanded="false" />
+            <element signature="e#1437#1438#0" expanded="false" />
+            <element signature="e#1676#1677#0" expanded="false" />
+            <element signature="e#1718#1719#0" expanded="false" />
+            <element signature="e#1777#1778#0" expanded="false" />
+            <element signature="e#1822#1823#0" expanded="false" />
+            <element signature="e#1864#1865#0" expanded="false" />
+            <element signature="e#1897#1898#0" expanded="false" />
+            <element signature="e#1943#1944#0" expanded="false" />
+            <element signature="e#1990#1991#0" expanded="false" />
+            <element signature="e#2511#2512#0" expanded="false" />
+            <element signature="e#2552#2553#0" expanded="false" />
+            <element signature="e#2604#2605#0" expanded="false" />
+            <element signature="e#2637#2638#0" expanded="false" />
+            <element signature="e#2675#2676#0" expanded="false" />
+            <element signature="e#2708#2709#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/BTConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="547" max-vertical-offset="1098">
+          <caret line="39" column="82" selection-start-line="39" selection-start-column="82" selection-end-line="39" selection-end-column="82" />
+          <folding>
+            <element signature="e#2876#2877#0" expanded="false" />
+            <element signature="e#2932#2933#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/FetchPhotoFromURLRunnable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1262" max-vertical-offset="2178">
+          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/Utils/ViewsHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="774">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/Utils/FileHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="740" max-vertical-offset="1278">
+          <caret line="59" column="39" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/Views/IViewItemClickListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/Views/adapters/UsersAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.6" vertical-offset="756" max-vertical-offset="1332">
+          <caret line="73" column="23" selection-start-line="70" selection-start-column="22" selection-end-line="73" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/AddUsersToGroupActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2846" max-vertical-offset="5004">
+          <caret line="229" column="28" selection-start-line="229" selection-start-column="28" selection-end-line="229" selection-end-column="28" />
+          <folding>
+            <element signature="e#6235#9953#0" expanded="true" />
+            <element signature="e#9137#9491#0" expanded="true" />
+            <element signature="e#9490#9491#0" expanded="true" />
+            <element signature="e#9952#9953#0" expanded="true" />
+            <element signature="e#10010#10236#0" expanded="true" />
+            <element signature="e#10235#10236#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/ShowExistingGroupsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2392" max-vertical-offset="4986">
+          <caret line="186" column="17" selection-start-line="186" selection-start-column="17" selection-end-line="186" selection-end-column="17" />
+          <folding>
+            <element signature="e#5147#5384#0" expanded="true" />
+            <element signature="e#5383#5384#0" expanded="true" />
+            <element signature="e#5443#5758#0" expanded="true" />
+            <element signature="e#5757#5758#0" expanded="true" />
+            <element signature="e#6368#6376#0" expanded="true" />
+            <element signature="e#7627#7635#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="414">
+          <caret line="9" column="57" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/better_together/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2970">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="e#6758#7083#0" expanded="true" />
+            <element signature="e#7082#7083#0" expanded="true" />
+            <element signature="e#7179#7331#0" expanded="true" />
+            <element signature="e#7330#7331#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/ic_launcher.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32247558" vertical-offset="0" max-vertical-offset="614">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding>
+            <element signature="e#541#559#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
@@ -1214,6 +1326,19 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>Android 4.2.2 Google APIs</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
@@ -1233,4 +1358,3 @@
     </states>
   </component>
 </project>
-

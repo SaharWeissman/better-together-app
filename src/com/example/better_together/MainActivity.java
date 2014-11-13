@@ -13,6 +13,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+import com.example.better_together.Utils.FileHelper;
+import com.example.better_together.Utils.SharedPrefHelper;
 import com.example.better_together.storage.SharedPrefStorage;
 
 import java.io.File;
@@ -35,6 +37,8 @@ public class MainActivity extends Activity {
     private Button mBtnCreateGroups;
     private Button mBtnShowExistingGroups;
     private Button mBtnFetchPhotos;
+    private Button mBtnExit;
+
     private SharedPrefStorage mSharedPrefStorage;
 
     /**
@@ -50,12 +54,18 @@ public class MainActivity extends Activity {
         Intent intent = getIntent();
         BTConstants.setAppProfilePicDirectoryPrefix("/data/data/" + getApplicationContext().getPackageName() + "/app_profilePictures/");
         initUIComponents();
+        initUtils(this);
         if(intent.getData() != null){
             handleAccessToken(intent);
         }
         if(!accessTokenExistsInSharedPref()) {
             getAccessToken();
         }
+    }
+
+    private void initUtils(Activity mainActivity) {
+        SharedPrefHelper.setActivityContext(this);
+        FileHelper.setActivityContext(this);
     }
 
     private boolean accessTokenExistsInSharedPref() {
@@ -164,6 +174,14 @@ public class MainActivity extends Activity {
                 Log.d(TAG,"clicked button fetch photos!");
                 Intent fetchPhotosIntent = new Intent(mActivity,FetchPhotosActivity.class);
                 mActivity.startActivity(fetchPhotosIntent);
+            }
+        });
+
+        mBtnExit = (Button)findViewById(R.id.btn_exit);
+        mBtnExit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mActivity.finish();
             }
         });
     }
