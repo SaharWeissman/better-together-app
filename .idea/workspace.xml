@@ -45,62 +45,7 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c4afe44-82c2-48ca-bf9d-336e715d6d1a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/Views/adapters/UsersAdapter$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/Views/adapters/UsersAdapter$1$2.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/AddUsersToGroupActivity$5.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/AddUsersToGroupActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/AddUsersToGroupActivity.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/AddUsersToGroupActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/BTConstants.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/BTConstants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/example/better_together/BuildConfig.class" afterPath="$PROJECT_DIR$/bin/classes/com/example/better_together/BuildConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/CreateGroupsActivity.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/CreateGroupsActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/FetchPhotoFromURLRunnable.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/FetchPhotoFromURLRunnable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/FetchPhotoFromURLTask.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/FetchPhotoFromURLTask.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/FetchPhotosActivity.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/FetchPhotosActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/Views/adapters/GroupsAdapter.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/Views/adapters/GroupsAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/storage/IKeyValueStorage.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/storage/IKeyValueStorage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/ITaskFetchPhotoFromURLMethods.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/ITaskFetchPhotoFromURLMethods.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/MainActivity$1.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/MainActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/MainActivity$2.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/MainActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/MainActivity$3.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/MainActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/MainActivity$4.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/MainActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/MainActivity$5.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/MainActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/MainActivity.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/R$id.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/R$layout.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/R$string.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/R.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/storage/SharedPrefStorage.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/storage/SharedPrefStorage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity$1.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity$2.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity$3.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity$4.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity$5.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity$6.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/ShowExistingGroupsActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/Views/adapters/UsersAdapter$1.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/Views/adapters/UsersAdapter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/Views/adapters/UsersAdapter.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/Views/adapters/UsersAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/Views/adapters/UsersPhotosAdapter.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/Views/adapters/UsersPhotosAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/Utils/ViewsHelper.class" afterPath="$PROJECT_DIR$/out/production/better_together/com/example/better_together/Utils/ViewsHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/better_together/better_together.apk" afterPath="$PROJECT_DIR$/out/production/better_together/better_together.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/AddUsersToGroupActivity.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/AddUsersToGroupActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/BTConstants.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/BTConstants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/example/better_together/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/com/example/better_together/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/FetchPhotoFromURLRunnable.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/FetchPhotoFromURLRunnable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/FetchPhotoFromURLTask.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/FetchPhotoFromURLTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/Utils/FileHelper.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/Utils/FileHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/storage/IKeyValueStorage.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/storage/IKeyValueStorage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/ITaskFetchPhotoFromURLMethods.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/ThreadPool/fetchPhoto/profilePicture/fromURL/ITaskFetchPhotoFromURLMethods.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/MainActivity.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/Utils/SharedPrefHelper.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/Utils/SharedPrefHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/storage/SharedPrefStorage.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/storage/SharedPrefStorage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/ShowExistingGroupsActivity.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/ShowExistingGroupsActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/better_together/Views/adapters/UsersAdapter.java" afterPath="$PROJECT_DIR$/src/com/example/better_together/Views/adapters/UsersAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/better_together.iml" afterPath="$PROJECT_DIR$/better_together.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.properties" afterPath="$PROJECT_DIR$/project.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="9c4afe44-82c2-48ca-bf9d-336e715d6d1a" name="Default" comment="" />
     <ignored path="better together.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -673,7 +618,13 @@
       <option name="project" value="LOCAL" />
       <updated>1414881877717</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add 'remove user from group' + minor modifications">
+      <created>1415874573927</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1415874573927</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -783,7 +734,8 @@
     <MESSAGE value="works but still need to fix performance issue in fetch photos (load each photo individually)" />
     <MESSAGE value="better performance: split get user recent media into 2 tasks: get caption&amp;date and get bitmap" />
     <MESSAGE value="added edit group name + delete group option" />
-    <option name="LAST_COMMIT_MESSAGE" value="added edit group name + delete group option" />
+    <MESSAGE value="add 'remove user from group' + minor modifications" />
+    <option name="LAST_COMMIT_MESSAGE" value="add 'remove user from group' + minor modifications" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
